@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*@keyframes pic1{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(10px) translateY(10px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic2{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(-10px) translateY(-10px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic3{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(15px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic4{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(5px) translateY(5px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic5{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(-5px) translateY(-5px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			vertical-align: top;
+		}
+		#p3 {
+			width: 320px;
+			height: 520px;
+			background:url(img/p2_bg.png) no-repeat 0 0;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+
+		}
+		#p3_back {
+			position: absolute;
+			top: 21px;
+			left: 19px;
+			width: 27px;
+			height: 27px;
+			overflow: hidden;
+			animation: pic1 3s infinite ease-in-out;
+		}
+		#p3_back img {
+			width: 27px;
+			height: 27px;
+		}
+		#p3_men1 {
+			position: absolute;
+			top: 29px;
+			left: 13px;
+			width: 176px;
+			height: 151px;
+			overflow: hidden;
+			animation: pic2 4s infinite ease-in-out;
+		}
+		#p3_men1 img {
+			width: 176px;
+			height: 151px;
+		}
+		#p3_men2 {
+			position: absolute;
+			top: 24px;
+			left: 156px;
+			width: 136px;
+			height: 157px;
+			animation: pic3 5s infinite ease-in-out;
+		}
+		#p3_men2 img {
+			width: 136px;
+			height: 157px;
+		}
+		#p3_men3 {
+			position: absolute;
+			top: 52px;
+			left: 108px;
+			width: 99px;
+			height: 130px;
+			overflow: hidden;
+			animation: pic4 3s infinite ease-in-out;
+		}
+		#p3_men3 img {
+			width: 99px;
+			height: 130px;
+		}
+		#p3_men4 {
+			position: absolute;
+			top: 97px;
+			left: 1px;
+			width: 113px;
+			height: 221px;
+			overflow: hidden;
+			animation: pic5 3s infinite ease-in-out;
+		}
+		#p3_men4 img {
+			width: 113px;
+			height: 221px;
+		}
+		#p3_men5 {
+			position: absolute;
+			top: 151px;
+			left: 95px;
+			width: 130px;
+			height: 105px;
+			overflow: hidden;
+		}
+		#p3_men5 img {
+			width: 130px;
+			height: 105px;
+		}
+		#p3_men6 {
+			position: absolute;
+			top: 94px;
+			left: 204px;
+			width: 115px;
+			height: 244px;
+			overflow: hidden;
+		}
+		#p3_men6 img {
+			width: 115px;
+			height: 244px;
+		}
+		#p3_car {
+			position: absolute;
+			top: 219px;
+			left: 4px;
+			width: 305px;
+			height: 305px;
+			overflow: hidden;
+		}
+		#p3_car img {
+			width: 305px;
+			height: 305px;
+		}
+		#p3_men7 {
+			position: absolute;
+			top: 279px;
+			left: 30px;
+			width: 88px;
+			height: 135px;
+			overflow: hidden;
+		}
+		#p3_men7 img {
+			width: 88px;
+			height: 135px;
+		}
+		#p3_men8 {
+			position: absolute;
+			top: 266px;
+			left: 119px;
+			width: 113px;
+			height: 98px;
+			overflow: hidden;
+		}
+		#p3_men8 img {
+			width: 113px;
+			height: 98px;
+		}
+		#p3_men9 {
+			position: absolute;
+			top: 254px;
+			left: 182px;
+			width: 93px;
+			height: 110px;
+			overflow: hidden;
+			transform: rotateZ(3deg);
+		}
+		#p3_men9 img {
+			width: 93px;
+			height: 120px;
+		}
+		#p3_logo {
+			position: absolute;
+			top: 352px;
+			left: 141px;
+			width: 23px;
+			height: 28px;
+			overflow: hidden;
+		}
+		#p3_logo img {
+			width: 23px;
+			height: 28px;
+		}
+		#p3_cat {
+			position: absolute;
+			top: 366px;
+			left: 4px;
+			width: 92px;
+			height: 134px;
+			overflow: hidden;
+		}
+		#p3_cat img {
+			width: 92px;
+			height: 134px;
+		}
+		#p3_text1 {
+			position: absolute;
+			top: 453px;
+			left: 82px;
+			width: 146px;
+			height: 26px;
+			overflow: hidden;
+		}
+		#p3_text1 img {
+			width: 146px;
+			height: 26px;
+		}
+		#p3_text2 {
+			position: absolute;
+			top: 17px;
+			left: 94px;
+			width: 121px;
+			height: 39px;
+			overflow: hidden;
+		}
+		#p3_text2 img {
+			width: 121px;
+			height: 39px;
+		}
+		#p3_cloud1 {
+			position: absolute;
+			top: 102px;
+			left: 0px;
+			width: 330px;
+			height: 120px;
+			overflow: hidden;
+		}
+		#p3_cloud1 img {
+			width: 330px;
+			height: 120px;
+		}
+		#p3_cloud2 {
+			position: absolute;
+			top: 170px;
+			left: 170px;
+			width: 227px;
+			height: 107px;
+			overflow: hidden;
+		}
+		#p3_cloud2 img {
+			width: 227px;
+			height: 107px;
+		}
+		#p3_cloud3 {
+			position: absolute;
+			top: 290px;
+			left: -125px;
+			width: 227px;
+			height: 107px;
+			overflow: hidden;
+		}
+		#p3_cloud3 img {
+			width: 227px;
+			height: 107px;
+		}
+	</style>
+</head>
+<body>
+	<div id="p3">
+		<div id="p3_back">
+			<img src="img/p3_back.png">
+		</div>
+		<div id="p3_men1">
+			<img src="img/p3_men1.png">
+		</div>
+		<div id="p3_men2">
+			<img src="img/p3_men2.png">
+		</div>
+		<div id="p3_men3">
+			<img src="img/p3_men3.png">
+		</div>
+		<div id="p3_men4">
+			<img src="img/p3_men4.png">
+		</div>
+		<div id="p3_men5">
+			<img src="img/p3_men5.png">
+		</div>
+		<div id="p3_men6">
+			<img src="img/p3_men6.png">
+		</div>
+		<div id="p3_car">
+			<img src="img/p3_car.png">
+		</div>
+		<div id="p3_men7">
+			<img src="img/p3_men7.png">
+		</div>
+		<div id="p3_men8">
+			<img src="img/p3_men8.png">
+		</div>
+		<div id="p3_men9">
+			<img src="img/p3_men9.png">
+		</div>
+		<div id="p3_logo">
+			<img src="img/p3_logo.png">
+		</div>
+		<div id="p3_cat">
+			<img src="img/p3_cat.png">
+		</div>
+		<div id="p3_text1">
+			<img src="img/p3_text1.png">
+		</div>
+		<div id="p3_text2">
+			<img src="img/p3_text2.png">
+		</div>
+		<div id="p3_cloud1">
+			<img src="img/p3_cloud1.png">
+		</div>
+		<div id="p3_cloud2">
+			<img src="img/p3_cloud2.png">
+		</div>
+		<div id="p3_cloud3">
+			<img src="img/p3_cloud3.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+	$(function(){
+		var w = window.screen.width;
+		var targetW = 320;
+		var scale = w/targetW; //当前尺寸/目标尺寸
+		var meta = document.createElement("meta");
+		meta.name = "viewport";
+		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+		document.head.appendChild(meta);
+	})
+</script>
+</body>
+</html>

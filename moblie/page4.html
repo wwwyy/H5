@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*@keyframes pic1{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(10px) translateY(10px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic2{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(-10px) translateY(-10px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic3{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(15px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic4{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(5px) translateY(5px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic5{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(-5px) translateY(-5px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			vertical-align: top;
+		}
+		#p4 {
+			width: 320px;
+			height: 520px;
+			background:url(img/p4_bg.png) no-repeat 0 0;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+
+		}
+		#p4_back {
+			position: absolute;
+			top: 21px;
+			left: 19px;
+			width: 27px;
+			height: 27px;
+			overflow: hidden;
+			animation: pic1 3s infinite ease-in-out;
+		}
+		#p4_back img {
+			width: 27px;
+			height: 27px;
+		}
+		#p4_cont_bg {
+			position: absolute;
+			top: 54px;
+			left: 33px;
+			width: 247px;
+			height: 349px;
+			overflow: hidden;
+			animation: pic1 3s infinite ease-in-out;
+		}
+		#p4_cont_bg img {
+			width: 247px;
+			height: 349px;
+		}
+		#p4_ball {
+			position: absolute;
+			top: 96px;
+			left: 75px;
+			width: 35px;
+			height: 33px;
+			overflow: hidden;
+			animation: pic2 4s infinite ease-in-out;
+		}
+		#p4_ball img {
+			width: 35px;
+			height: 33px;
+		}
+		#p4_ufo {
+			position: absolute;
+			top: 92px;
+			left: 185px;
+			width: 53px;
+			height: 34px;
+			animation: pic3 5s infinite ease-in-out;
+		}
+		#p4_ufo img {
+			width: 53px;
+			height: 34px;
+		}
+		#p4_ico1 {
+			position: absolute;
+			top: 163px;
+			left: 159px;
+			width: 25px;
+			height: 44px;
+			overflow: hidden;
+			animation: pic4 3s infinite ease-in-out;
+		}
+		#p4_ico1 img {
+			width: 25px;
+			height: 44px;
+		}
+		#p4_ico2 {
+			position: absolute;
+			top: 173px;
+			left: 49px;
+			width: 231px;
+			height: 227px;
+			overflow: hidden;
+			animation: pic5 3s infinite ease-in-out;
+		}
+		#p4_ico2 img {
+			width: 231px;
+			height: 227px;
+		}
+		#p4_ico3 {
+			position: absolute;
+			top: 252px;
+			left: 65px;
+			width: 200px;
+			height: 148px;
+			overflow: hidden;
+		}
+		#p4_ico3 img {
+			width: 200px;
+			height: 148px;
+		}
+		#p4_ico4 {
+			position: absolute;
+			top: 202px;
+			left: 79px;
+			width: 154px;
+			height: 158px;
+			overflow: hidden;
+		}
+		#p4_ico4 img {
+			width: 154px;
+			height: 158px;
+		}
+		#p4_text1 {
+			position: absolute;
+			top: 404px;
+			left: 36px;
+			width: 250px;
+			height: 42px;
+			overflow: hidden;
+		}
+		#p4_text1 img {
+			width: 250px;
+			height: 42px;
+		}
+		#p4_text2 {
+			position: absolute;
+			top: 407px;
+			left: 90px;
+			width: 150px;
+			height: 30px;
+			overflow: hidden;
+		}
+		#p4_text2 img {
+			width: 150px;
+			height: 30px;
+		}
+		#p4_prev {
+			position: absolute;
+			top: 465px;
+			left: 65px;
+			width: 25px;
+			height: 27px;
+			overflow: hidden;
+		}
+		#p4_prev img {
+			width: 25px;
+			height: 27px;
+		}
+		#p4_next {
+			position: absolute;
+			top: 465px;
+			left: 236px;
+			width: 25px;
+			height: 27px;
+			overflow: hidden;
+		}
+		#p4_next img {
+			width: 25px;
+			height: 27px;
+		}
+		#p4_random {
+			position: absolute;
+			top: 455px;
+			left: 139px;
+			width: 44px;
+			height: 42px;
+			overflow: hidden;
+		}
+		#p4_random img {
+			width: 44px;
+			height: 42px;
+		}
+	</style>
+</head>
+<body>
+	<div id="p4">
+		<div id="p4_back">
+			<img src="img/p3_back.png">
+		</div>
+		<div id="p4_cont_bg">
+			<img src="img/p4_cont_bg.png">
+		</div>
+		<div id="p4_text1">
+			<img src="img/p4_text1.png">
+		</div>
+		<div id="p4_ball">
+			<img src="img/p4_ball.png">
+		</div>
+		<div id="p4_ufo">
+			<img src="img/p4_ufo.png">
+		</div>
+		<div id="p4_ico1">
+			<img src="img/p4_ico1.png">
+		</div>
+		<div id="p4_ico2">
+			<img src="img/p4_ico2.png">
+		</div>
+		<div id="p4_ico3">
+			<img src="img/p4_ico3.png">
+		</div>
+		<div id="p4_ico4">
+			<img src="img/p4_ico4.png">
+		</div>
+		<div id="p4_text1">
+			<img src="img/p4_text1.png">
+		</div>
+		<div id="p4_text2">
+			<img src="img/p4_text2.png">
+		</div>
+		<div id="p4_prev">
+			<img src="img/prev.png">
+		</div>
+		<div id="p4_next">
+			<img src="img/next.png">
+		</div>
+		<div id="p4_random">
+			<img src="img/random.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+	$(function(){
+		var w = window.screen.width;
+		var targetW = 320;
+		var scale = w/targetW; //当前尺寸/目标尺寸
+		var meta = document.createElement("meta");
+		meta.name = "viewport";
+		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+		document.head.appendChild(meta);
+	})
+</script>
+</body>
+</html>

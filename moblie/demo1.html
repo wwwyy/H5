@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable = no"/>
+	<title>Document</title>
+	<style type="text/css">
+		#div1 {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background: red;
+			top: 0;
+			left: 0;
+			opacity: .6;
+		}
+		a{	position: absolute;
+			top: 0;
+			left: 0;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<a href="http://www.miaov.com">你点我啊</a>
+	<div id="div1"></div>
+	<script type="text/javascript">
+		window.onload = function(){
+			var div = document.getElementById('div1')
+			div.addEventListener('touchstart', start)
+			function start(){
+				this.style.display = 'none'
+			}
+		}
+	</script>
+</body>
+</html>

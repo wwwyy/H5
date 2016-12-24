@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		@keyframes pic1{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(10px) translateY(10px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic2{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(-10px) translateY(-10px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic3{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(15px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic4{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(5px) translateY(5px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic5{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(-5px) translateY(-5px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			vertical-align: top;
+		}
+		#p1 {
+			width: 320px;
+			height: 520px;
+			background:url(img/p1_bg.png) no-repeat 0 0;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+
+		}
+		#p1_pic1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			animation: pic1 3s infinite ease-in-out;
+		}
+		#p1_pic1 img {
+			width: 320px;
+			height: 520px;
+		}
+		#p1_pic2 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 320px;
+			height: 520px;
+			overflow: hidden;
+			animation: pic2 4s infinite ease-in-out;
+		}
+		#p1_pic2 img {
+			width: 320px;
+			height: 520px;
+		}
+		#p1_pic3 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			width: 320px;
+			height: 520px;
+			animation: pic3 5s infinite ease-in-out;
+		}
+		#p1_pic3 img {
+			width: 320px;
+			height: 520px;
+		}
+		#p1_pic4 {
+			position: absolute;
+			top: 148px;
+			left: 66px;
+			width: 184px;
+			height: 153px;
+			overflow: hidden;
+			animation: pic4 3s infinite ease-in-out;
+		}
+		#p1_pic4 img {
+			width: 184px;
+			height: 153px;
+		}
+		#p1_pic5 {
+			position: absolute;
+			top: 153px;
+			left: 74px;
+			width: 184px;
+			height: 153px;
+			overflow: hidden;
+			animation: pic5 3s infinite ease-in-out;
+		}
+		#p1_pic5 img {
+			width: 184px;
+			height: 153px;
+		}
+		#p1_pic6 {
+			position: absolute;
+			top: 315px;
+			left: 115px;
+			width: 91px;
+			height: 11px;
+			overflow: hidden;
+		}
+		#p1_pic6 img {
+			width: 91px;
+			height: 11px;
+		}
+		#p1_pic7 {
+			position: absolute;
+			top: 349px;
+			left: 98px;
+			width: 126px;
+			height: 49px;
+			overflow: hidden;
+		}
+		#p1_pic7 img {
+			width: 126px;
+			height: 49px;
+		}
+	</style>
+</head>
+<body>
+	<div id="p1">
+		<div id="p1_pic1">
+			<img src="img/p1_pic1.png">
+		</div>
+		<div id="p1_pic2">
+			<img src="img/p1_pic2.png">
+		</div>
+		<div id="p1_pic3">
+			<img src="img/p1_pic3.png">
+		</div>
+		<div id="p1_pic4">
+			<img src="img/p1_pic4.png">
+		</div>
+		<div id="p1_pic5">
+			<img src="img/p1_pic5.png">
+		</div>
+		<div id="p1_pic6">
+			<img src="img/p1_pic6.png">
+		</div>
+		<div id="p1_pic7">
+			<img src="img/p1_pic7.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+	$(function(){
+		var w = window.screen.width;
+		var targetW = 320;
+		var scale = w/targetW; //当前尺寸/目标尺寸
+		var meta = document.createElement("meta");
+		meta.name = "viewport";
+		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+		document.head.appendChild(meta);
+	})
+</script>
+</body>
+</html>

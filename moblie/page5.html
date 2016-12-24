@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*@keyframes pic1{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(10px) translateY(10px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic2{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(-10px) translateY(-10px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic3{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(15px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic4{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(5px) translateY(5px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic5{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(-5px) translateY(-5px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			vertical-align: top;
+		}
+		#p5 {
+			width: 320px;
+			height: 520px;
+			background:url(img/p4_bg.png) no-repeat 0 0;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+
+		}
+		#p5_back {
+			position: absolute;
+			top: 21px;
+			left: 19px;
+			width: 27px;
+			height: 27px;
+			overflow: hidden;
+			animation: pic1 3s infinite ease-in-out;
+		}
+		#p5_back img {
+			width: 27px;
+			height: 27px;
+		}
+		#p5_cont_bg {
+			position: absolute;
+			top: 54px;
+			left: 33px;
+			width: 247px;
+			height: 349px;
+			overflow: hidden;
+			animation: pic1 3s infinite ease-in-out;
+		}
+		#p5_cont_bg img {
+			width: 247px;
+			height: 349px;
+		}
+		#p5_code {
+			position: absolute;
+			top: 71px;
+			left: 47px;
+			width: 233px;
+			height: 202px;
+			overflow: hidden;
+			animation: pic1 3s infinite ease-in-out;
+		}
+		#p5_code img {
+			width: 235px;
+			height: 202px;
+		}
+		#p5_man {
+			position: absolute;
+			top: 95px;
+			left: 90px;
+			width: 150px;
+			height: 178px;
+			overflow: hidden;
+			animation: pic2 4s infinite ease-in-out;
+		}
+		#p5_man img {
+			width: 150px;
+			height: 178px;
+		}
+		#p5_man_l {
+			position: absolute;
+			top: 225px;
+			left: 89px;
+			width: 78px;
+			height: 110px;
+			animation: pic3 5s infinite ease-in-out;
+		}
+		#p5_man_l img {
+			width: 78px;
+			height: 110px;
+		}
+		#p5_man_r {
+			position: absolute;
+			top: 217px;
+			left: 178px;
+			width: 63px;
+			height: 119px;
+			overflow: hidden;
+			animation: pic4 3s infinite ease-in-out;
+		}
+		#p5_man_r img {
+			width: 63px;
+			height: 119px;
+		}
+		#p5_key {
+			position: absolute;
+			top: 288px;
+			left: 74px;
+			width: 181px;
+			height: 67px;
+			overflow: hidden;
+			animation: pic5 3s infinite ease-in-out;
+		}
+		#p5_key img {
+			width: 181px;
+			height: 67px;
+		}
+		#p5_ico3 {
+			position: absolute;
+			top: 252px;
+			left: 65px;
+			width: 200px;
+			height: 148px;
+			overflow: hidden;
+		}
+		#p5_ico3 img {
+			width: 200px;
+			height: 148px;
+		}
+		#p5_computer {
+			position: absolute;
+			top: 362px;
+			left: 69px;
+			width: 193px;
+			height: 41px;
+			overflow: hidden;
+		}
+		#p5_computer img {
+			width: 193px;
+			height: 41px;
+		}
+		#p5_text1 {
+			position: absolute;
+			top: 404px;
+			left: 36px;
+			width: 250px;
+			height: 42px;
+			overflow: hidden;
+		}
+		#p5_text1 img {
+			width: 250px;
+			height: 42px;
+		}
+		#p5_prev {
+			position: absolute;
+			top: 465px;
+			left: 65px;
+			width: 25px;
+			height: 27px;
+			overflow: hidden;
+		}
+		#p5_prev img {
+			width: 25px;
+			height: 27px;
+		}
+		#p5_next {
+			position: absolute;
+			top: 465px;
+			left: 236px;
+			width: 25px;
+			height: 27px;
+			overflow: hidden;
+		}
+		#p5_next img {
+			width: 25px;
+			height: 27px;
+		}
+		#p5_random {
+			position: absolute;
+			top: 455px;
+			left: 139px;
+			width: 44px;
+			height: 42px;
+			overflow: hidden;
+		}
+		#p5_random img {
+			width: 44px;
+			height: 42px;
+		}
+	</style>
+</head>
+<body>
+	<div id="p5">
+		<div id="p5_back">
+			<img src="img/p3_back.png">
+		</div>
+		<div id="p5_cont_bg">
+			<img src="img/p5_cont_bg.png">
+		</div>
+		<div id="p5_code">
+			<img src="img/p5_code1.png">
+		</div>
+		<div id="p5_text1">
+			<img src="img/p5_text1.png">
+		</div>
+		<div id="p5_man">
+			<img src="img/p5_man.png">
+		</div>
+		<div id="p5_man_l">
+			<img src="img/p5_man_l.png">
+		</div>
+		<div id="p5_man_r">
+			<img src="img/p5_man_r.png">
+		</div>
+		<div id="p5_key">
+			<img src="img/p5_key.png">
+		</div>
+		<div id="p5_computer">
+			<img src="img/p5_computer.png">
+		</div>
+		<div id="p5_text1">
+			<img src="img/p5_text1.png">
+		</div>
+		<div id="p5_prev">
+			<img src="img/prev.png">
+		</div>
+		<div id="p5_next">
+			<img src="img/next.png">
+		</div>
+		<div id="p5_random">
+			<img src="img/random.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+	$(function(){
+		var w = window.screen.width;
+		var targetW = 320;
+		var scale = w/targetW; //当前尺寸/目标尺寸
+		var meta = document.createElement("meta");
+		meta.name = "viewport";
+		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+		document.head.appendChild(meta);
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		@keyframes p2_logo{
+			0% {transform: translateY(50px)}
+			100% {transform: translateY(0px);opacity: 1;}
+		}
+		@keyframes p2_text1{
+			0% {transform: rotateX(90deg)}
+			100% {transform: rotateX(0deg);opacity: 1;}
+		}
+		@keyframes p2_ico1{
+			0% {transform: translateX(-127px);}
+			100% {transform: translateX(0px);opacity: 1}
+		}
+		@keyframes p2_ico2{
+			0% {transform: translateY(60px);}
+			100% {transform: translateY(0px);opacity: 1}
+		}
+		@keyframes p2_ico3{
+			0% {transform: translateX(127px);}
+			100% {transform: translateX(0px);opacity: 1}
+		}
+		@keyframes p2_text2{
+			0% {transform: translateY(50px);}
+			100% {transform: translateY(0px);opacity: 1}
+		}
+		@keyframes p2_text3{
+			0% {transform: translateY(50px);}
+			100% {transform: translateY(0px);opacity: 1}
+		}
+		@keyframes p2_cust1{
+			0% {transform: translateY(50px);}
+			100% {transform: translateY(0px);opacity: 1}
+		}
+		@keyframes p2_cust2{
+			0% {transform: translateY(50px);}
+			100% {transform: translateY(0px);opacity: 1}
+		}
+		@keyframes p2_btn{
+			0% {transform: translateY(50px);}
+			100% {transform: translateY(0px);opacity: .5}
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			vertical-align: top;
+			width: 100%;
+			height: 100%;
+		}
+		#p2 {
+			width: 640px;
+			height: 1040px;
+			background:url(img/p2_bg.png) no-repeat 0 0;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+		}
+		#p2 div {
+			opacity: 0;
+		}
+		#p2_logo {
+			position: absolute;
+			top: 44px;
+			left: 283px;
+			width: 73px;
+			height: 90px;
+			overflow: hidden;
+			animation: p2_logo 1s ease-in-out;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p2_text1 {
+			position: absolute;
+			top: 170px;
+			left: 127px;
+			width: 389px;
+			height: 98px;
+			overflow: hidden;
+			animation: p2_text1 1s 1s cubic-bezier(0.175, 0.885, 0.32, 2);
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p2_ico1 {
+			position: absolute;
+			top: 282px;
+			left: 85px;
+			width: 79px;
+			height: 123px;
+			animation: p2_ico1 1s 2s ease-in-out;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p2_ico2 {
+			position: absolute;
+			top: 277px;
+			left: 264px;
+			width: 111px;
+			height: 140px;
+			overflow: hidden;
+			animation: p2_ico2 1s 2s ease-in-out;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p2_ico3 {
+			position: absolute;
+			top: 283px;
+			left: 458px;
+			width: 98px;
+			height: 134px;
+			overflow: hidden;
+			animation: p2_ico3 1s 2s ease-in-out;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p2_text2 {
+			position: absolute;
+			top: 441px;
+			left: 37px;
+			width: 568px;
+			height: 47px;
+			overflow: hidden;
+			animation: p2_text2 1s 3s ease-in-out;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p2_text3 {
+			position: absolute;
+			top: 621px;
+			left: 232px;
+			width: 177px;
+			height: 43px;
+			overflow: hidden;
+			animation: p2_text3 1s 4s ease-in-out;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p2_cust1 {
+			position: absolute;
+			top: 689px;
+			left: 119px;
+			width: 401px;
+			height: 72px;
+			overflow: hidden;
+			animation: p2_cust1 1s 4.2s ease-in-out;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p2_cust2 {
+			position: absolute;
+			top: 803px;
+			left: 39px;
+			width: 569px;
+			height: 39px;
+			overflow: hidden;
+			animation: p2_cust2 1s 4.4s ease-in-out;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p2_btn {
+			position: absolute;
+			top: 905px;
+			left: 285px;
+			width: 65px;
+			height: 63px;
+			overflow: hidden;
+			opacity: .5;
+			animation: p2_btn 1s 4.6s ease-in-out;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+	</style>
+</head>
+<body>
+	<div id="p2">
+		<div id="p2_logo">
+			<img src="img/p2_logo.png">
+		</div>
+		<div id="p2_text1">
+			<img src="img/p2_text1.png">
+		</div>
+		<div id="p2_ico1">
+			<img src="img/p2_ico1.png">
+		</div>
+		<div id="p2_ico2">
+			<img src="img/p2_ico2.png">
+		</div>
+		<div id="p2_ico3">
+			<img src="img/p2_ico3.png">
+		</div>
+		<div id="p2_text2">
+			<img src="img/p2_text2.png">
+		</div>
+		<div id="p2_text3">
+			<img src="img/p2_text3.png">
+		</div>
+		<div id="p2_cust1">
+			<img src="img/p2_cust1.png">
+		</div>
+		<div id="p2_cust2">
+			<img src="img/p2_cust2.png">
+		</div>
+		<div id="p2_btn">
+			<img src="img/p2_btn.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+	$(function(){
+		var w = window.screen.width;
+		var targetW = 640;
+		var scale = w/targetW; //当前尺寸/目标尺寸
+		var meta = document.createElement("meta");
+		meta.name = "viewport";
+		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+		document.head.appendChild(meta);
+		$('#p2_btn').on('click',function(){
+			window.location.replace('page3.html')
+		})
+	})
+</script>
+</body>
+</html>

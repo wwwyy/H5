@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*@keyframes pic1{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(10px) translateY(10px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic2{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(-10px) translateY(-10px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic3{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(15px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic4{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(5px) translateY(5px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes pic5{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(-5px) translateY(-5px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			vertical-align: top;
+		}
+		#p6 {
+			width: 320px;
+			height: 520px;
+			background:url(img/p4_bg.png) no-repeat 0 0;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+		}
+		#p6_back {
+			position: absolute;
+			top: 21px;
+			left: 19px;
+			width: 27px;
+			height: 27px;
+			overflow: hidden;
+			animation: pic1 3s infinite ease-in-out;
+		}
+		#p6_back img {
+			width: 27px;
+			height: 27px;
+		}
+		#p6_cont_bg {
+			position: absolute;
+			top: 54px;
+			left: 33px;
+			width: 247px;
+			height: 349px;
+			overflow: hidden;
+			animation: pic1 3s infinite ease-in-out;
+		}
+		#p6_cont_bg img {
+			width: 247px;
+			height: 349px;
+		}
+		#p6_pic1,
+		#p6_pic2,
+		#p6_pic3 {
+			position: absolute;
+			top: 77px;
+			left: 52px;
+			width: 223px;
+			height: 274px;
+			overflow: hidden;
+			animation: pic1 3s infinite ease-in-out;
+		}
+		#p6_pic1 img,
+		#p6_pic2 img,
+		#p6_pic3 img {
+			width: 223px;
+			height: 274px;
+		}
+		#p6_man {	
+			position: absolute;
+			top: 127px;
+			left: 47px;
+			width: 231px;
+			height: 274px;
+			overflow: hidden;
+			animation: pic2 4s infinite ease-in-out;
+		}
+		#p6_man img {
+			width: 231px;
+			height: 274px;
+		}
+		#p6_text1 {
+			position: absolute;
+			top: 404px;
+			left: 36px;
+			width: 250px;
+			height: 42px;
+			overflow: hidden;
+		}
+		#p6_text1 img {
+			width: 250px;
+			height: 42px;
+		}
+		#p6_prev {
+			position: absolute;
+			top: 465px;
+			left: 65px;
+			width: 25px;
+			height: 27px;
+			overflow: hidden;
+		}
+		#p6_prev img {
+			width: 25px;
+			height: 27px;
+		}
+		#p6_next {
+			position: absolute;
+			top: 465px;
+			left: 236px;
+			width: 25px;
+			height: 27px;
+			overflow: hidden;
+		}
+		#p6_next img {
+			width: 25px;
+			height: 27px;
+		}
+		#p6_random {
+			position: absolute;
+			top: 455px;
+			left: 139px;
+			width: 44px;
+			height: 42px;
+			overflow: hidden;
+		}
+		#p6_random img {
+			width: 44px;
+			height: 42px;
+		}
+	</style>
+</head>
+<body>
+	<div id="p6">
+		<div id="p6_back">
+			<img src="img/p3_back.png">
+		</div>
+		<div id="p6_cont_bg">
+			<img src="img/p4_cont_bg.png">
+		</div>
+		<div id="p6_pic1">
+			<img src="img/p6_pic1.png">
+		</div>
+		<div id="p6_pic2">
+			<img src="img/p6_pic2.png">
+		</div>
+		<div id="p6_pic3">
+			<img src="img/p6_pic3.png">
+		</div>
+		<div id="p6_man">
+			<img src="img/p6_man.png">
+		</div>
+		<div id="p6_text1">
+			<img src="img/p6_text1.png">
+		</div>
+		<div id="p6_prev">
+			<img src="img/prev.png">
+		</div>
+		<div id="p6_next">
+			<img src="img/next.png">
+		</div>
+		<div id="p6_random">
+			<img src="img/random.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+	$(function(){
+		var w = window.screen.width;
+		var targetW = 320;
+		var scale = w/targetW; //当前尺寸/目标尺寸
+		var meta = document.createElement("meta");
+		meta.name = "viewport";
+		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+		document.head.appendChild(meta);
+	})
+</script>
+</body>
+</html>

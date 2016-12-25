@@ -3,6 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW; 
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
 	<style type="text/css">
 		@keyframes pic1{
 			0% {transform: translateX(0px) translateY(0px);}
@@ -43,11 +54,13 @@
 			height: 100%;
 		}
 		#p1 {
+			position: relative;
 			width: 640px;
 			height: 1040px;
 			background:url(img/p1_bg.png) no-repeat 0 0;
 			-webkit-background-size: 100%;
 			background-size: 100%;
+			overflow: hidden;
 		}
 		#p1_pic1,
 		#p1_pic2,
@@ -141,33 +154,36 @@
 <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
 <script type="text/javascript">
 	$(function(){
-		var w = window.screen.width;
-		var targetW = 640;
-		var scale = w/targetW; 
-		var meta = document.createElement("meta");
-		meta.name = "viewport";
-		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
-		document.head.appendChild(meta);
-		document.ontouchstart = function(ev){
-			var sY = ev.pageY;
-			var eY = 0;
+		var startY,endY;
 
-			document.ontouchend = function(ev){
-				eY = ev.pageY;
-				if (sY-eY>300) {
-					$('#p1').children('div:odd').animate({
-						top:'-1040',
-						left:'-640'
-					},1500)
-					$('#p1').children('div:even').animate({
-						top:'-1040',
-						left:'640'
-					},1500,function(){
-						window.location.replace('page2.html')
-					})
-				}
-			}
-		}
+		$("body").on("touchstart", touchStartRecord)
+		             .on("touchmove", touchMoveHide)
+		            
+		function touchStartRecord(event){
+		        var touch = event.touches[0];
+		         startY = touch.pageY;
+		 };
+
+		function touchMoveHide(event){
+		        var touch = event.touches[0];
+		        endY = touch.pageY; 
+		          if (Math.abs(endY - startY) >= 200) {
+		           $("body").on("touchcancel touchend", touchEndShow);
+		         }
+		 };
+
+		function touchEndShow(event){
+          	$('#p1').children('div:odd').animate({
+				top:'-1040',
+				left:'-640'
+			},1500)
+			$('#p1').children('div:even').animate({
+				top:'-1040',
+				left:'640'
+			},1500,function(){
+				window.location.replace('page2.html')
+			})
+		 };
 	})
 </script>
 </body>

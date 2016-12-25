@@ -3,6 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW; 
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
 	<style type="text/css">
 		@keyframes p2_logo{
 			0% {transform: translateY(50px)}
@@ -54,6 +65,7 @@
 			height: 100%;
 		}
 		#p2 {
+			position: relative;
 			width: 640px;
 			height: 1040px;
 			background:url(img/p2_bg.png) no-repeat 0 0;
@@ -211,13 +223,6 @@
 <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
 <script type="text/javascript">
 	$(function(){
-		var w = window.screen.width;
-		var targetW = 640;
-		var scale = w/targetW; //当前尺寸/目标尺寸
-		var meta = document.createElement("meta");
-		meta.name = "viewport";
-		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
-		document.head.appendChild(meta);
 		$('#p2_btn').on('click',function(){
 			window.location.replace('page3.html')
 		})

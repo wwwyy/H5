@@ -3,207 +3,316 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
 	<style type="text/css">
-		/*@keyframes pic1{
+		@keyframes p4_ball{
 			0% {transform: translateX(0px) translateY(0px);}
 			50% {transform: translateX(10px) translateY(10px);}
 			100% {transform: translateX(0px) translateY(0px);}
 		}
-		@keyframes pic2{
+		@keyframes imgDe{
+			0% {transform: scale(0);opacity: 0}
+			100% {transform: scale(1);opacity: 1}
+		}
+		@keyframes img3{
+			0% {transform: scale(0);}
+			100% {transform: scale(1);}
+		}
+		@keyframes img4{
+			0% {transform: rotateY(90deg);}
+			100% {transform: rotateY(0);;}
+		}
+		@keyframes p4_ufo{
 			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(-10px) translateY(-10px);}
+			25% {transform: translateX(-15px) translateY(-15px);}
+			50% {transform: translateX(15px) translateY(-15px);}
 			100% {transform: translateX(0px) translateY(0px);}
 		}
-		@keyframes pic3{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(15px);}
-			100% {transform: translateX(0px) translateY(0px);}
+		@keyframes p4_ico1{
+			0% {transform: translateX(0px) translateY(0px) scale(1);}
+			50% {transform: translateX(10px) translateY(10px) scale(1.2);}
+			100% {transform: translateX(0px) translateY(0px) scale(1);}
 		}
-		@keyframes pic4{
+		@keyframes p4_ico2{
 			0% {transform: translateX(0px) translateY(0px);}
 			50% {transform: translateX(5px) translateY(5px);}
 			100% {transform: translateX(0px) translateY(0px);}
 		}
-		@keyframes pic5{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(-5px) translateY(-5px);}
-			100% {transform: translateX(0px) translateY(0px);}
-		}*/
+		@keyframes p4_ico3{
+			0% {transform: translateX(0px);}
+			30% {transform: translateX(-8px);}
+			60% {transform: translateX(8px);}
+			100% {transform: translateX(0);}
+		}
+		@keyframes p4_ico4{
+			0% {transform: translateY(0px);}
+			50% {transform: translateY(15px);}
+			100% {transform: translateY(0px);}
+		}
+		@keyframes ro1{
+			0% {transform: rotateY(0);opacity: 1}
+			100% {transform: rotateY(90deg);opacity: 0}
+		}
+		@keyframes ro2{
+			0% {transform: rotateY(90deg);opacity: 0}
+			100% {transform: rotateY(0deg);opacity: 1}
+		}
+		@keyframes p4_l_l{
+			0% {transform: scale(.9);opacity: 0}
+			100% {transform: scale(1);opacity: 1}
+		}
+		@keyframes p4_l_r{
+			0% {opacity: 0}
+			100% {opacity: 1}
+		}
 		*{
 			margin: 0;
 			padding: 0;
 		}
 		img {
 			vertical-align: top;
+			width: 100%;
+			height: 100%;
 		}
 		#p4 {
-			width: 320px;
-			height: 520px;
+			position: relative;
+			width: 640px;
+			height: 1040px;
 			background:url(img/p4_bg.png) no-repeat 0 0;
 			-webkit-background-size: 100%;
 			background-size: 100%;
-
+			overflow: hidden;
 		}
 		#p4_back {
 			position: absolute;
-			top: 21px;
-			left: 19px;
-			width: 27px;
-			height: 27px;
+			top: 42px;
+			left: 37px;
+			width: 54px;
+			height: 54px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p4_back img {
-			width: 27px;
-			height: 27px;
+			z-index: 999;
 		}
 		#p4_cont_bg {
 			position: absolute;
-			top: 54px;
-			left: 33px;
-			width: 247px;
-			height: 349px;
+			top: 121px;
+			left: 70px;
+			width: 494px;
+			height: 687px;
 			overflow: hidden;
 			animation: pic1 3s infinite ease-in-out;
 		}
-		#p4_cont_bg img {
-			width: 247px;
-			height: 349px;
+		#p4_first {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 640px;
+			height: 300px;
+			z-index: 2;
+		}
+		#p4_last{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 640px;
+			height: 300px;
+			opacity: 0;
+			z-index: 2;
+			transform-origin: center;
+		}
+		#p4_last_bg {
+			position: absolute;
+			top: 121px;
+			left: 70px;
+			width: 494px;
+			height: 687px;
+			overflow: hidden;
 		}
 		#p4_ball {
 			position: absolute;
-			top: 96px;
-			left: 75px;
-			width: 35px;
-			height: 33px;
+			top: 192px;
+			left: 150px;
+			width: 69px;
+			height: 66px;
 			overflow: hidden;
-			animation: pic2 4s infinite ease-in-out;
+			animation: p4_ball 4s infinite ease-in-out;
 		}
 		#p4_ball img {
-			width: 35px;
-			height: 33px;
+			idth: 69px;
+			height: 66px;
+			animation: imgDe 1s ease-in-out;
 		}
 		#p4_ufo {
 			position: absolute;
-			top: 92px;
-			left: 185px;
-			width: 53px;
-			height: 34px;
-			animation: pic3 5s infinite ease-in-out;
+			top: 190px;
+			left: 380px;
+			width: 105px;
+			height: 68px;
+			animation: p4_ufo 2s infinite ease-in-out;
 		}
 		#p4_ufo img {
-			width: 53px;
-			height: 34px;
+			width: 105px;
+			height: 68px;
+			animation: imgDe 1s ease-in-out;
 		}
 		#p4_ico1 {
 			position: absolute;
-			top: 163px;
-			left: 159px;
-			width: 25px;
-			height: 44px;
+			top: 330px;
+			left: 316px;
+			width: 50px;
+			height: 88px;
 			overflow: hidden;
-			animation: pic4 3s infinite ease-in-out;
+			animation: p4_ico1 3s infinite ease-in-out;
 		}
 		#p4_ico1 img {
-			width: 25px;
-			height: 44px;
+			width: 50px;
+			height: 88px;
+			animation: imgDe 1s ease-in-out;
 		}
 		#p4_ico2 {
 			position: absolute;
-			top: 173px;
-			left: 49px;
-			width: 231px;
-			height: 227px;
+			top: 340px;
+			left: 98px;
+			width: 461px;
+			height: 455px;
 			overflow: hidden;
-			animation: pic5 3s infinite ease-in-out;
+			animation: p4_ico2 3.5s infinite ease-in-out;
 		}
 		#p4_ico2 img {
-			width: 231px;
-			height: 227px;
+			width: 461px;
+			height: 455px;
+			animation: imgDe 1s ease-in-out;
 		}
 		#p4_ico3 {
 			position: absolute;
-			top: 252px;
-			left: 65px;
-			width: 200px;
-			height: 148px;
+			top: 492px;
+			left: 129px;
+			width: 400px;
+			height: 295px;
 			overflow: hidden;
+			animation: p4_ico3 5s infinite ease-in-out;
 		}
 		#p4_ico3 img {
-			width: 200px;
-			height: 148px;
+			width: 400px;
+			height: 295px;
+			animation: img4 1.2s cubic-bezier(0.175, 0.885, 0.32, 2);
 		}
 		#p4_ico4 {
 			position: absolute;
-			top: 202px;
-			left: 79px;
-			width: 154px;
-			height: 158px;
+			top: 402px;
+			left: 158px;
+			width: 308px;
+			height: 316px;
 			overflow: hidden;
+			animation: p4_ico4 6s infinite ease-in-out;
 		}
 		#p4_ico4 img {
-			width: 154px;
-			height: 158px;
+			width: 308px;
+			height: 316px;
+			animation: imgDe 1s ease-in-out;
 		}
 		#p4_text1 {
 			position: absolute;
-			top: 404px;
-			left: 36px;
-			width: 250px;
-			height: 42px;
+			top: 814px;
+			left: 80px;
+			width: 500px;
+			height: 84px;
 			overflow: hidden;
 		}
 		#p4_text1 img {
-			width: 250px;
-			height: 42px;
+			width: 500px;
+			height: 84px;
 		}
 		#p4_text2 {
 			position: absolute;
-			top: 407px;
-			left: 90px;
-			width: 150px;
-			height: 30px;
+			top: 822px;
+			left: 180px;
+			width: 304px;
+			height: 61px;
 			overflow: hidden;
 		}
 		#p4_text2 img {
-			width: 150px;
-			height: 30px;
+			width: 304px;
+			height: 61px;
 		}
 		#p4_prev {
 			position: absolute;
-			top: 465px;
-			left: 65px;
-			width: 25px;
-			height: 27px;
+			top: 935px;
+			left: 130px;
+			width: 49px;
+			height: 53px;
 			overflow: hidden;
-		}
-		#p4_prev img {
-			width: 25px;
-			height: 27px;
 		}
 		#p4_next {
 			position: absolute;
-			top: 465px;
-			left: 236px;
-			width: 25px;
-			height: 27px;
+			top: 935px;
+			left: 471px;
+			width: 49px;
+			height: 59px;
 			overflow: hidden;
-		}
-		#p4_next img {
-			width: 25px;
-			height: 27px;
 		}
 		#p4_random {
 			position: absolute;
-			top: 455px;
-			left: 139px;
-			width: 44px;
-			height: 42px;
+			top: 915px;
+			left: 278px;
+			width: 88px;
+			height: 83px;
 			overflow: hidden;
 		}
-		#p4_random img {
-			width: 44px;
-			height: 42px;
+		#p4_l_l {
+			position: absolute;
+			top: 140px;
+			left: 90px;
+			width: 218px;
+			height: 653px;
+			overflow: hidden;
+			animation: p4_l_l .8s infinite ease-in-out;
+		}
+		#p4_l_r {
+			position: absolute;
+			top: 150px;
+			left: 89px;
+			width: 469px;
+			height: 649px;
+			overflow: hidden;
+			animation: p4_l_r .8s .1s infinite ease-in-out;
+		}
+		#p4_l_b {
+			position: absolute;
+			top: 153px;
+			left: 90px;
+			width: 470px;
+			height: 650px;
+			overflow: hidden;
+		}
+		#p4_vkt {
+			position: absolute;
+			top: 246px;
+			left: 92px;
+			width: 469px;
+			height: 545px;
+			overflow: hidden;
+		}
+		#p4 .ro1 {
+			animation: ro1 1s ease-in-out;
+			z-index: 2;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p4 .ro2 {
+			animation: ro2 1s 1s ease-in-out;
+			z-index: 2;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
 		}
 	</style>
 </head>
@@ -212,29 +321,45 @@
 		<div id="p4_back">
 			<img src="img/p3_back.png">
 		</div>
-		<div id="p4_cont_bg">
-			<img src="img/p4_cont_bg.png">
+		<div id="p4_first">
+			<div id="p4_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p4_ball">
+				<img src="img/p4_ball.png">
+			</div>
+			<div id="p4_ufo">
+				<img src="img/p4_ufo.png">
+			</div>
+			<div id="p4_ico1">
+				<img src="img/p4_ico1.png">
+			</div>
+			<div id="p4_ico2">
+				<img src="img/p4_ico2.png">
+			</div>
+			<div id="p4_ico3">
+				<img src="img/p4_ico3.png">
+			</div>
+			<div id="p4_ico4">
+				<img src="img/p4_ico4.png">
+			</div>
 		</div>
-		<div id="p4_text1">
-			<img src="img/p4_text1.png">
-		</div>
-		<div id="p4_ball">
-			<img src="img/p4_ball.png">
-		</div>
-		<div id="p4_ufo">
-			<img src="img/p4_ufo.png">
-		</div>
-		<div id="p4_ico1">
-			<img src="img/p4_ico1.png">
-		</div>
-		<div id="p4_ico2">
-			<img src="img/p4_ico2.png">
-		</div>
-		<div id="p4_ico3">
-			<img src="img/p4_ico3.png">
-		</div>
-		<div id="p4_ico4">
-			<img src="img/p4_ico4.png">
+		<div id="p4_last">
+			<div id="p4_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p4_l_l">
+				<img src="img/p4_l_l.png">
+			</div>
+			<div id="p4_l_r">
+				<img src="img/p4_l_r.png">
+			</div>
+			<div id="p4_l_b">
+				<img src="img/p4_l_b.png">
+			</div>
+			<div id="p4_vkt">
+				<img src="img/p4_vkt.png">
+			</div>
 		</div>
 		<div id="p4_text1">
 			<img src="img/p4_text1.png">
@@ -255,13 +380,36 @@
 <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
 <script type="text/javascript">
 	$(function(){
-		var w = window.screen.width;
-		var targetW = 320;
-		var scale = w/targetW; //当前尺寸/目标尺寸
-		var meta = document.createElement("meta");
-		meta.name = "viewport";
-		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
-		document.head.appendChild(meta);
+		var onOff = false;
+		$('#p4_back').on('click',function(){
+			window.location.replace('page3.html')
+		})
+		$('#p4_prev').on('click',function() {
+			window.location.href='page12.html'
+		})
+		$('#p4_next').on('click',function() {
+			window.location.href='page5.html'
+		})
+		$('#p4_random').on('click',function () {
+			if (!onOff) {
+				$('#p4_text2').fadeOut('slow',function () {
+					$('#p4_text2')[0].children[0].src='img/p4_text3.png';
+				})
+				$('#p4_first').removeClass().addClass("ro1");
+				$('#p4_last').removeClass().addClass("ro2")
+
+			}else {
+				$('#p4_text2').fadeOut('slow',function () {
+					$('#p4_text2')[0].children[0].src='img/p4_text2.png';
+				})
+
+				$('#p4_first')[0].style.opacity = 0;
+				$('#p4_first').removeClass().addClass("ro2")
+				$('#p4_last').removeClass().addClass("ro1")
+			}
+			$('#p4_text2').fadeIn('slow')
+			onOff = !onOff;
+		})
 	})
 </script>
 </body>

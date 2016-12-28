@@ -3,259 +3,141 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
 	<style type="text/css">
-		/*@keyframes pic1{
+		@keyframes p6_pic1{
 			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(10px) translateY(10px);}
+			50% {transform: translateX(-10) translateY(-10px);}
 			100% {transform: translateX(0px) translateY(0px);}
 		}
-		@keyframes pic2{
+		@keyframes p6_pic2{
+			0% {transform: translateX(0px) translateY(0px);}
+			50% {transform: translateX(6px) translateY(6px);}
+			100% {transform: translateX(0px) translateY(0px);}
+		}
+		@keyframes p6_pic3{
 			0% {transform: translateX(0px) translateY(0px);}
 			50% {transform: translateX(-10px) translateY(-10px);}
 			100% {transform: translateX(0px) translateY(0px);}
 		}
-		@keyframes pic3{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(15px);}
-			100% {transform: translateX(0px) translateY(0px);}
+		@keyframes ro1{
+			0% {transform: rotateY(0);opacity: 1}
+			100% {transform: rotateY(90deg);opacity: 0}
 		}
-		@keyframes pic4{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(5px) translateY(5px);}
-			100% {transform: translateX(0px) translateY(0px);}
+		@keyframes ro2{
+			0% {transform: rotateY(90deg);opacity: 0}
+			100% {transform: rotateY(0deg);opacity: 1}
 		}
-		@keyframes pic5{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(-5px) translateY(-5px);}
-			100% {transform: translateX(0px) translateY(0px);}
-		}*/
 		*{
 			margin: 0;
 			padding: 0;
 		}
 		img {
 			vertical-align: top;
+			width: 100%;
+			height: 100%;
 		}
-		#p7 {
+		#p6 {
+			position: relative;
 			width: 640px;
 			height: 1040px;
 			background:url(img/p4_bg.png) no-repeat 0 0;
 			-webkit-background-size: 100%;
 			background-size: 100%;
+			overflow: hidden;
 		}
-		#p7_back {
+		#p6_back {
 			position: absolute;
 			top: 42px;
 			left: 37px;
 			width: 54px;
 			height: 54px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			z-index: 999;
 		}
-		#p7_back img {
-			width: 54px;
-			height: 54px;
+		#p5_first {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 640px;
+			height: 300px;
+			z-index: 2;
 		}
-		#p7_cont_bg {
+		#p5_last{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 640px;
+			height: 300px;
+			opacity: 0;
+			z-index: 2;
+			transform-origin: center;
+		}
+		#p6_cont_bg {
 			position: absolute;
 			top: 121px;
 			left: 70px;
 			width: 494px;
 			height: 687px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
 		}
-		#p7_cont_bg img {
-			width: 494px;
-			height: 687px;
-		}
-		#p7_cat {
+		#p6_pic1,
+		#p6_pic2,
+		#p6_pic3 {
 			position: absolute;
-			top: 151px;
-			left: 226px;
-			width: 334px;
-			height: 99px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p7_cat img {
-			width: 334px;
-			height: 99px;
-		}
-		#p7_cat1 {
-			position: absolute;
-			top: 167px;
-			left: 108px;
-			width: 109px;
-			height: 157px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p7_cat1 img {
-			width: 109px;
-			height: 157px;
-		}
-		#p7_cat2 {
-			position: absolute;
-			top: 325px;
+			top: 153px;
 			left: 100px;
-			width: 148px;
-			height: 174px;
+			width: 446px;
+			height: 547px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
 		}
-		#p7_cat2 img {
-			width: 148px;
-			height: 174px;
+		#p6_pic1 {
+			animation: p6_pic1 5s infinite ease-in-out;
 		}
-		#p7_cat3 {
+		#p6_pic2 {
+			animation: p6_pic2 5s infinite ease-in-out;
+		}
+		#p6_pic3{
+			animation: p6_pic3 5s infinite ease-in-out;
+		}
+		#p6_man {
 			position: absolute;
 			top: 242px;
-			left: 403px;
-			width: 160px;
-			height: 177px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p7_cat3 img {
-			width: 160px;
-			height: 177px;
-		}
-		#p7_cat4 {
-			position: absolute;
-			top: 246px;
-			left: 221px;
-			width: 80px;
-			height: 97px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p7_cat4 img {
-			width: 80px;
-			height: 97px;
-		}
-		#p7_man {	
-			position: absolute;
-			top: 275px;
-			left: 109px;
-			width: 454px;
-			height: 327px;
+			left: 97px;
+			width: 462px;
+			height: 547px;
 			overflow: hidden;
 			animation: pic2 4s infinite ease-in-out;
 		}
-		#p7_man img {
-			width: 454px;
-			height: 327px;
-		}
-		#p7_text1 {
+		#p6_text1 {
 			position: absolute;
 			top: 814px;
 			left: 80px;
 			width: 500px;
 			height: 84px;
+			z-index: 11;
 			overflow: hidden;
 		}
-		#p7_text1 img {
+		#p6_text2 {
+			position: absolute;
+			top: 814px;
+			left: 80px;
 			width: 500px;
 			height: 84px;
-		}
-		#p7_text2 {
-			position: absolute;
-			top: 822px;
-			left: 180px;
-			width: 304px;
-			height: 61px;
+			z-index: 22;
 			overflow: hidden;
 		}
-		#p7_text2 img {
-			width: 304px;
-			height: 61px;
-		}
-		#p7_food1 {
-			position: absolute;
-			top: 578px;
-			left: 107px;
-			width: 64px;
-			height: 56px;
-			overflow: hidden;
-		}
-		#p7_food1 img {
-			width: 64px;
-			height: 56px;
-		}
-		#p7_food2 {
-			position: absolute;
-			top: 580px;
-			left: 185px;
-			width: 93px;
-			height: 75px;
-			overflow: hidden;
-		}
-		#p7_food2 img {
-			width: 93px;
-			height: 75px;
-		}
-		#p7_food3 {
-			position: absolute;
-			top: 628px;
-			left: 209px;
-			width: 356px;
-			height: 178px;
-			overflow: hidden;
-		}
-		#p7_food3 img {
-			width: 356px;
-			height: 178px;
-		}
-		#p7_food4 {
-			position: absolute;
-			top: 673px;
-			left: 132px;
-			width: 109px;
-			height: 106px;
-			overflow: hidden;
-		}
-		#p7_food4 img {
-			width: 109px;
-			height: 106px;
-		}
-		#p7_food5 {
-			position: absolute;
-			top: 665px;
-			left: 244px;
-			width: 111px;
-			height: 79px;
-			overflow: hidden;
-		}
-		#p7_food5 img {
-			width: 111px;
-			height: 79px;
-		}
-		#p7_food6 {
-			position: absolute;
-			top: 574px;
-			left: 295px;
-			width: 241px;
-			height: 121px;
-			overflow: hidden;
-		}
-		#p7_food6 img {
-			width: 241px;
-			height: 121px;
-		}
-		#p7_food7 {
-			position: absolute;
-			top: 664px;
-			left: 311px;
-			width: 256px;
-			height: 128px;
-			overflow: hidden;
-		}
-		#p7_food7 img {
-			width: 256px;
-			height: 128px;
-		}
-		#p7_prev {
+		#p6_prev {
 			position: absolute;
 			top: 935px;
 			left: 130px;
@@ -263,11 +145,7 @@
 			height: 53px;
 			overflow: hidden;
 		}
-		#p7_prev img {
-			width: 49px;
-			height: 53px;
-		}
-		#p7_next {
+		#p6_next {
 			position: absolute;
 			top: 935px;
 			left: 471px;
@@ -275,11 +153,7 @@
 			height: 59px;
 			overflow: hidden;
 		}
-		#p7_next img {
-			width: 49px;
-			height: 59px;
-		}
-		#p7_random {
+		#p6_random {
 			position: absolute;
 			top: 915px;
 			left: 278px;
@@ -287,86 +161,97 @@
 			height: 83px;
 			overflow: hidden;
 		}
-		#p7_random img {
-			width: 88px;
-			height: 83px;
+		#p6 .ro1 {
+			animation: ro1 1s ease-in-out;
+			z-index: 2;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p6 .ro2 {
+			animation: ro2 1s 1s ease-in-out;
+			z-index: 2;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
 		}
 	</style>
 </head>
 <body>
-	<div id="p7">
-		<div id="p7_back">
+	<div id="p6">
+		<div id="p6_back">
 			<img src="img/p3_back.png">
 		</div>
-		<div id="p7_cont_bg">
-			<img src="img/p5_cont_bg.png">
+		<div id="p6_first">
+			<div id="p6_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p6_pic1">
+				<img src="img/p6_pic1.png">
+			</div>
+			<div id="p6_pic2">
+				<img src="img/p6_pic2.png">
+			</div>
+			<div id="p6_pic3">
+				<img src="img/p6_pic3.png">
+			</div>
+			<div id="p6_man">
+				<img src="img/p6_man.png">
+			</div>
 		</div>
-		<div id="p7_cat">
-			<img src="img/p7_cat.png">
+		<div id="p6_last">
+			<div id="p6_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
 		</div>
-		<div id="p7_cat1">
-			<img src="img/p7_cat1.png">
+		<div id="p6_text1">
+			<img src="img/p4_text1.png">
 		</div>
-		<div id="p7_cat2">
-			<img src="img/p7_cat2.png">
+		<div id="p6_text2">
+			<img src="img/p6_text1.png">
 		</div>
-		<div id="p7_cat3">
-			<img src="img/p7_cat3.png">
-		</div>
-		<div id="p7_cat4">
-			<img src="img/p7_cat4.png">
-		</div>
-		<div id="p7_man">
-			<img src="img/p7_man.png">
-		</div>
-		<div id="p7_text1">
-			<img src="img/p7_text1.png">
-		</div>
-		<div id="p7_text2">
-			<img src="img/p7_text2.png">
-		</div>
-		<div id="p7_food1">
-			<img src="img/p7_food1.png">
-		</div>
-		<div id="p7_food2">
-			<img src="img/p7_food2.png">
-		</div>
-		<div id="p7_food3">
-			<img src="img/p7_food3.png">
-		</div>
-		<div id="p7_food4">
-			<img src="img/p7_food4.png">
-		</div>
-		<div id="p7_food5">
-			<img src="img/p7_food5.png">
-		</div>
-		<div id="p7_food6">
-			<img src="img/p7_food6.png">
-		</div>
-		<div id="p7_food7">
-			<img src="img/p7_food7.png">
-		</div>
-		<div id="p7_prev">
+		<div id="p6_prev">
 			<img src="img/prev.png">
 		</div>
-		<div id="p7_next">
+		<div id="p6_next">
 			<img src="img/next.png">
 		</div>
-		<div id="p7_random">
+		<div id="p6_random">
 			<img src="img/random.png">
 		</div>
 	</div>
 <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
 <script type="text/javascript">
+$(function(){
 	$(function(){
-		var w = window.screen.width;
-		var targetW = 640;
-		var scale = w/targetW; //当前尺寸/目标尺寸
-		var meta = document.createElement("meta");
-		meta.name = "viewport";
-		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
-		document.head.appendChild(meta);
+		var onOff = false;
+		$('#p6_back').on('click',function(){
+			window.location.replace('page3.html')
+		})
+		$('#p6_prev').on('click',function() {
+			window.location.href='page4.html'
+		})
+		$('#p6_next').on('click',function() {
+			window.location.href='page7.html'
+		})
+		$('#p6_random').on('click',function () {
+			if (!onOff) {
+				$('#p6_text2').fadeOut('slow',function () {
+					$('#p6_text2')[0].children[0].src='img/p6_text2.png';
+				})
+				// $('#p6_first').removeClass().addClass("ro1");
+				// $('#p6_last').removeClass().addClass("ro2")
+			}else {
+				$('#p6_text2').fadeOut('slow',function () {
+					$('#p6_text2')[0].children[0].src='img/p6_text1.png';
+				})
+				// $('#p6_first')[0].style.opacity = 0;
+				// $('#p6_first').removeClass().addClass("ro2")
+				// $('#p6_last').removeClass().addClass("ro1")
+			}
+			$('#p6_text2').fadeIn('slow')
+			onOff = !onOff;
+		})
 	})
+})
 </script>
 </body>
 </html>

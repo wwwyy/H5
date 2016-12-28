@@ -3,143 +3,137 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
 	<style type="text/css">
-		/*@keyframes pic1{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(10px) translateY(10px);}
-			100% {transform: translateX(0px) translateY(0px);}
+		@keyframes p5_man_l{
+			0% {transform:rotateX(0deg);}
+			50% {transform: rotateX(20deg);}
+			100% {transform: rotateX(0deg);}
 		}
-		@keyframes pic2{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(-10px) translateY(-10px);}
-			100% {transform: translateX(0px) translateY(0px);}
+		@keyframes p5_l_man{
+			0% {transform: translateX(0px);}
+			33% {transform: translateX(-6px);}
+			66% {transform: translateX(6px)}
+			100% {transform: translateX(0px);}
 		}
-		@keyframes pic3{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(15px);}
-			100% {transform: translateX(0px) translateY(0px);}
+		@keyframes ro1{
+			0% {transform: rotateY(0);opacity: 1}
+			100% {transform: rotateY(90deg);opacity: 0}
 		}
-		@keyframes pic4{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(5px) translateY(5px);}
-			100% {transform: translateX(0px) translateY(0px);}
+		@keyframes ro2{
+			0% {transform: rotateY(90deg);opacity: 0}
+			100% {transform: rotateY(0deg);opacity: 1}
 		}
-		@keyframes pic5{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(-5px) translateY(-5px);}
-			100% {transform: translateX(0px) translateY(0px);}
-		}*/
 		*{
 			margin: 0;
 			padding: 0;
 		}
 		img {
 			vertical-align: top;
+			width: 100%;
+			height: 100%;
 		}
 		#p5 {
-			width: 320px;
-			height: 520px;
+			position: relative;
+			width: 640px;
+			height: 1040px;
 			background:url(img/p4_bg.png) no-repeat 0 0;
 			-webkit-background-size: 100%;
 			background-size: 100%;
-
+			overflow: hidden;
 		}
 		#p5_back {
 			position: absolute;
-			top: 21px;
-			left: 19px;
-			width: 27px;
-			height: 27px;
+			top: 42px;
+			left: 37px;
+			width: 54px;
+			height: 54px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			z-index: 999;
 		}
-		#p5_back img {
-			width: 27px;
-			height: 27px;
+		#p5_first {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 640px;
+			height: 300px;
+			z-index: 2;
+		}
+		#p5_last{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 640px;
+			height: 300px;
+			opacity: 0;
+			z-index: 2;
+			transform-origin: center;
 		}
 		#p5_cont_bg {
 			position: absolute;
-			top: 54px;
-			left: 33px;
-			width: 247px;
-			height: 349px;
+			top: 121px;
+			left: 70px;
+			width: 494px;
+			height: 687px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p5_cont_bg img {
-			width: 247px;
-			height: 349px;
 		}
 		#p5_code {
 			position: absolute;
-			top: 71px;
-			left: 47px;
-			width: 233px;
-			height: 202px;
+			top: 142px;
+			left: 89px;
+			width: 470px;
+			height: 403px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p5_code img {
-			width: 235px;
-			height: 202px;
 		}
 		#p5_man {
 			position: absolute;
-			top: 95px;
-			left: 90px;
-			width: 150px;
-			height: 178px;
+			top: 178px;
+			left: 180px;
+			width: 299px;
+			height: 356px;
 			overflow: hidden;
-			animation: pic2 4s infinite ease-in-out;
-		}
-		#p5_man img {
-			width: 150px;
-			height: 178px;
 		}
 		#p5_man_l {
 			position: absolute;
-			top: 225px;
-			left: 89px;
-			width: 78px;
-			height: 110px;
-			animation: pic3 5s infinite ease-in-out;
-		}
-		#p5_man_l img {
-			width: 78px;
-			height: 110px;
+			top: 437px;
+			left: 180px;
+			width: 156px;
+			height: 220px;
+			animation: p5_man_l .8s infinite ease-in-out;
 		}
 		#p5_man_r {
 			position: absolute;
-			top: 217px;
-			left: 178px;
-			width: 63px;
-			height: 119px;
+			top: 425px;
+			left: 358px;
+			width: 120px;
+			height: 237px;
 			overflow: hidden;
-			animation: pic4 3s infinite ease-in-out;
-		}
-		#p5_man_r img {
-			width: 63px;
-			height: 119px;
+			animation: p5_man_l 1s infinite ease-in-out;
 		}
 		#p5_key {
 			position: absolute;
-			top: 288px;
-			left: 74px;
-			width: 181px;
-			height: 67px;
+			top: 576px;
+			left: 148px;
+			width: 361px;
+			height: 133px;
 			overflow: hidden;
-			animation: pic5 3s infinite ease-in-out;
-		}
-		#p5_key img {
-			width: 181px;
-			height: 67px;
 		}
 		#p5_ico3 {
 			position: absolute;
-			top: 252px;
-			left: 65px;
-			width: 200px;
-			height: 148px;
+			top: 442px;
+			left: 163px;
+			width: 74px;
+			height: 38px;
 			overflow: hidden;
 		}
 		#p5_ico3 img {
@@ -148,63 +142,74 @@
 		}
 		#p5_computer {
 			position: absolute;
-			top: 362px;
-			left: 69px;
-			width: 193px;
-			height: 41px;
+			top: 717px;
+			left: 138px;
+			width: 385px;
+			height: 82px;
 			overflow: hidden;
-		}
-		#p5_computer img {
-			width: 193px;
-			height: 41px;
 		}
 		#p5_text1 {
 			position: absolute;
-			top: 404px;
-			left: 36px;
-			width: 250px;
-			height: 42px;
+			top: 814px;
+			left: 80px;
+			width: 500px;
+			height: 84px;
+			z-index: 11;
 			overflow: hidden;
 		}
-		#p5_text1 img {
-			width: 250px;
-			height: 42px;
+		#p5_text2 {
+			position: absolute;
+			top: 814px;
+			left: 80px;
+			width: 500px;
+			height: 84px;
+			z-index: 22;
+			overflow: hidden;
 		}
 		#p5_prev {
 			position: absolute;
-			top: 465px;
-			left: 65px;
-			width: 25px;
-			height: 27px;
+			top: 935px;
+			left: 130px;
+			width: 49px;
+			height: 53px;
 			overflow: hidden;
-		}
-		#p5_prev img {
-			width: 25px;
-			height: 27px;
 		}
 		#p5_next {
 			position: absolute;
-			top: 465px;
-			left: 236px;
-			width: 25px;
-			height: 27px;
+			top: 935px;
+			left: 471px;
+			width: 49px;
+			height: 59px;
 			overflow: hidden;
-		}
-		#p5_next img {
-			width: 25px;
-			height: 27px;
 		}
 		#p5_random {
 			position: absolute;
-			top: 455px;
-			left: 139px;
-			width: 44px;
-			height: 42px;
+			top: 915px;
+			left: 278px;
+			width: 88px;
+			height: 83px;
 			overflow: hidden;
 		}
-		#p5_random img {
-			width: 44px;
-			height: 42px;
+		#p5_l_man {
+			position: absolute;
+			top: 246px;
+			left: 70px;
+			width: 502px;
+			height: 543px;
+			overflow: hidden;
+			animation: p5_l_man 4s infinite ease-in-out;
+		}
+		#p5 .ro1 {
+			animation: ro1 1s ease-in-out;
+			z-index: 2;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p5 .ro2 {
+			animation: ro2 1s 1s ease-in-out;
+			z-index: 2;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
 		}
 	</style>
 </head>
@@ -213,31 +218,44 @@
 		<div id="p5_back">
 			<img src="img/p3_back.png">
 		</div>
-		<div id="p5_cont_bg">
-			<img src="img/p5_cont_bg.png">
+		<div id="p5_first">
+			<div id="p5_cont_bg">
+				<img src="img/p5_cont_bg.png">
+			</div>
+			<div id="p5_code">
+				<img src="img/p5_code1.png">
+			</div>
+			<div id="p5_text1">
+				<img src="img/p5_text1.png">
+			</div>
+			<div id="p5_man">
+				<img src="img/p5_man.png">
+			</div>
+			<div id="p5_man_l">
+				<img src="img/p5_man_l.png">
+			</div>
+			<div id="p5_man_r">
+				<img src="img/p5_man_r.png">
+			</div>
+			<div id="p5_key">
+				<img src="img/p5_key.png">
+			</div>
+			<div id="p5_computer">
+				<img src="img/p5_computer.png">
+			</div>
 		</div>
-		<div id="p5_code">
-			<img src="img/p5_code1.png">
+		<div id="p5_last">
+			<div id="p5_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p5_l_man">
+				<img src="img/p5_l_man.png">
+			</div>
 		</div>
 		<div id="p5_text1">
-			<img src="img/p5_text1.png">
+			<img src="img/p4_text1.png">
 		</div>
-		<div id="p5_man">
-			<img src="img/p5_man.png">
-		</div>
-		<div id="p5_man_l">
-			<img src="img/p5_man_l.png">
-		</div>
-		<div id="p5_man_r">
-			<img src="img/p5_man_r.png">
-		</div>
-		<div id="p5_key">
-			<img src="img/p5_key.png">
-		</div>
-		<div id="p5_computer">
-			<img src="img/p5_computer.png">
-		</div>
-		<div id="p5_text1">
+		<div id="p5_text2">
 			<img src="img/p5_text1.png">
 		</div>
 		<div id="p5_prev">
@@ -253,13 +271,36 @@
 <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
 <script type="text/javascript">
 	$(function(){
-		var w = window.screen.width;
-		var targetW = 320;
-		var scale = w/targetW; //当前尺寸/目标尺寸
-		var meta = document.createElement("meta");
-		meta.name = "viewport";
-		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
-		document.head.appendChild(meta);
+		$(function(){
+			var onOff = false;
+			$('#p5_back').on('click',function(){
+				window.location.replace('page3.html')
+			})
+			$('#p5_prev').on('click',function() {
+				window.location.href='page4.html'
+			})
+			$('#p5_next').on('click',function() {
+				window.location.href='page7.html'
+			})
+			$('#p5_random').on('click',function () {
+				if (!onOff) {
+					$('#p5_text2').fadeOut('slow',function () {
+						$('#p5_text2')[0].children[0].src='img/p5_text2.png';
+					})
+					$('#p5_first').removeClass().addClass("ro1");
+					$('#p5_last').removeClass().addClass("ro2")
+				}else {
+					$('#p5_text2').fadeOut('slow',function () {
+						$('#p5_text2')[0].children[0].src='img/p5_text1.png';
+					})
+					$('#p5_first')[0].style.opacity = 0;
+					$('#p5_first').removeClass().addClass("ro2")
+					$('#p5_last').removeClass().addClass("ro1")
+				}
+				$('#p5_text2').fadeIn('slow')
+				onOff = !onOff;
+			})
+		})
 	})
 </script>
 </body>

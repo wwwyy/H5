@@ -68,11 +68,13 @@
 			height: 100%;
 		}
 		#p7 {
+			position: relative;
 			width: 640px;
 			height: 1040px;
 			background:url(img/p4_bg.png) no-repeat 0 0;
 			-webkit-background-size: 100%;
 			background-size: 100%;
+			overflow: hidden;
 		}
 		#p7_back {
 			position: absolute;
@@ -80,8 +82,8 @@
 			left: 37px;
 			width: 54px;
 			height: 54px;
+			z-index: 999;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
 		}
 		#p7_first {
 			position: absolute;

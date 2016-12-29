@@ -15,17 +15,28 @@
 	})()
 	</script>
 	<style type="text/css">
-		/*@keyframes pic1{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(10px) translateY(10px);}
-			100% {transform: translateX(0px) translateY(0px);}
+		@keyframes p8_pic3{
+			0% {transform: translateY(0px);}
+			20% {transform: translateY(-15px);}
+			40% {transform: translateY(5px);}
+			60% {transform: translateY(-8px);}
+			80% {transform: translateY(4px);}
+			100% {transform: translateY(0px);}
 		}
-		@keyframes pic2{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(-10px) translateY(-10px);}
-			100% {transform: translateX(0px) translateY(0px);}
+		@keyframes ro1{
+			0% {transform: rotateY(0);opacity: 1}
+			100% {transform: rotateY(90deg);opacity: 0}
 		}
-		@keyframes pic3{
+		@keyframes ro2{
+			0% {transform: rotateY(90deg);opacity: 0}
+			100% {transform: rotateY(0deg);opacity: 1}
+		}
+		@keyframes p8_l_p2{
+			0% {opacity: 1;}
+			50% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		/*@keyframes pic3{
 			0% {transform: translateX(0px) translateY(0px);}
 			50% {transform: translateX(15px);}
 			100% {transform: translateX(0px) translateY(0px);}
@@ -46,13 +57,17 @@
 		}
 		img {
 			vertical-align: top;
+			width: 100%;
+			height: 100%;
 		}
 		#p8 {
+			position: relative;
 			width: 640px;
 			height: 1040px;
 			background:url(img/p4_bg.png) no-repeat 0 0;
 			-webkit-background-size: 100%;
 			background-size: 100%;
+			overflow: hidden;
 		}
 		#p8_back {
 			position: absolute;
@@ -60,12 +75,26 @@
 			left: 37px;
 			width: 54px;
 			height: 54px;
+			z-index: 999;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
 		}
-		#p8_back img {
-			width: 54px;
-			height: 54px;
+		#p8_first {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 640px;
+			height: 300px;
+			z-index: 2;
+		}
+		#p8_last{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 640px;
+			height: 300px;
+			opacity: 0;
+			z-index: 2;
+			transform-origin: center;
 		}
 		#p8_cont_bg {
 			position: absolute;
@@ -74,11 +103,6 @@
 			width: 494px;
 			height: 687px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p8_cont_bg img {
-			width: 494px;
-			height: 687px;
 		}
 		#p8_pic1 {
 			position: absolute;
@@ -87,11 +111,6 @@
 			width: 186px;
 			height: 227px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p8_pic1 img {
-			width: 186px;
-			height: 227px;
 		}
 		#p8_pic2 {
 			position: absolute;
@@ -100,11 +119,6 @@
 			width: 470px;
 			height: 400px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p8_pic2 img {
-			width: 470px;
-			height: 400px;
 		}
 		#p8_pic3 {
 			position: absolute;
@@ -113,11 +127,7 @@
 			width: 168px;
 			height: 188px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p8_pic3 img {
-			width: 168px;
-			height: 188px;
+			animation: p8_pic3 2s infinite ease-in-out;
 		}
 		#p8_man {
 			position: absolute;
@@ -126,11 +136,6 @@
 			width: 343px;
 			height: 455px;
 			overflow: hidden;
-			animation: pic2 4s infinite ease-in-out;
-		}
-		#p8_man img {
-			width: 343px;
-			height: 455px;
 		}
 		#p8_text1 {
 			position: absolute;
@@ -140,10 +145,6 @@
 			height: 84px;
 			overflow: hidden;
 		}
-		#p8_text1 img {
-			width: 500px;
-			height: 84px;
-		}
 		#p8_text2 {
 			position: absolute;
 			top: 822px;
@@ -151,10 +152,6 @@
 			width: 304px;
 			height: 61px;
 			overflow: hidden;
-		}
-		#p8_text2 img {
-			width: 304px;
-			height: 61px;
 		}
 		#p8_food1 {
 			position: absolute;
@@ -176,10 +173,6 @@
 			height: 75px;
 			overflow: hidden;
 		}
-		#p8_food2 img {
-			width: 93px;
-			height: 75px;
-		}
 		#p8_food3 {
 			position: absolute;
 			top: 628px;
@@ -187,10 +180,6 @@
 			width: 356px;
 			height: 178px;
 			overflow: hidden;
-		}
-		#p8_food3 img {
-			width: 356px;
-			height: 178px;
 		}
 		#p8_food4 {
 			position: absolute;
@@ -200,10 +189,6 @@
 			height: 106px;
 			overflow: hidden;
 		}
-		#p8_food4 img {
-			width: 109px;
-			height: 106px;
-		}
 		#p8_food5 {
 			position: absolute;
 			top: 665px;
@@ -211,10 +196,6 @@
 			width: 111px;
 			height: 79px;
 			overflow: hidden;
-		}
-		#p8_food5 img {
-			width: 111px;
-			height: 79px;
 		}
 		#p8_food6 {
 			position: absolute;
@@ -224,10 +205,6 @@
 			height: 121px;
 			overflow: hidden;
 		}
-		#p8_food6 img {
-			width: 241px;
-			height: 121px;
-		}
 		#p8_food7 {
 			position: absolute;
 			top: 664px;
@@ -235,10 +212,6 @@
 			width: 256px;
 			height: 128px;
 			overflow: hidden;
-		}
-		#p8_food7 img {
-			width: 256px;
-			height: 128px;
 		}
 		#p8_prev {
 			position: absolute;
@@ -248,10 +221,6 @@
 			height: 53px;
 			overflow: hidden;
 		}
-		#p8_prev img {
-			width: 49px;
-			height: 53px;
-		}
 		#p8_next {
 			position: absolute;
 			top: 935px;
@@ -259,10 +228,6 @@
 			width: 49px;
 			height: 59px;
 			overflow: hidden;
-		}
-		#p8_next img {
-			width: 49px;
-			height: 59px;
 		}
 		#p8_random {
 			position: absolute;
@@ -272,9 +237,98 @@
 			height: 83px;
 			overflow: hidden;
 		}
-		#p8_random img {
-			width: 88px;
-			height: 83px;
+		#p8 .ro1 {
+			animation: ro1 1s ease-in-out;
+			z-index: 2;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p8 .ro2 {
+			animation: ro2 1s 1s ease-in-out;
+			z-index: 2;
+			-webkit-animation-fill-mode:forwards;
+			animation-fill-mode:forwards;
+		}
+		#p8_l_p1 {
+			position: absolute;
+			top: 140px;
+			left: 89px;
+			width: 471px;
+			height: 370px;
+			overflow: hidden;
+		}
+		#p8_l_p2 {
+			position: absolute;
+			top: 141px;
+			left: 89px;
+			width: 470px;
+			height: 268px;
+			overflow: hidden;
+			animation: p8_l_p2 1s infinite ease-in-out;
+		}
+		#p8_l_p3 {
+			position: absolute;
+			top: 149px;
+			left: 365px;
+			width: 157px;
+			height: 268px;
+			z-index: 3;
+			overflow: hidden;
+		}
+		#p8_l_t {
+			position: absolute;
+			top: 180px;
+			left: 130px;
+			width: 217px;
+			height: 110px;
+			overflow: hidden;
+		}
+		#p8_l_bg {
+			position: absolute;
+			top: 341px;
+			left: 96px;
+			width: 466px;
+			height: 453px;
+			overflow: hidden;
+		}
+		#p8_l_man {
+			position: absolute;
+			top: 353px;
+			left: 129px;
+			width: 432px;
+			height: 443px;
+			overflow: hidden;
+		}
+		#p8_l_fish1,
+		#p8_l_fish2,
+		#p8_l_fish3,
+		#p8_l_fish4,
+		#p8_l_fish5 {
+			position: absolute;
+			width: 64px;
+			height: 87px;
+			z-index: 3;
+			overflow: hidden;
+		}
+		#p8_l_fish1 {
+			top: 373px;
+			left: 88px;
+		}
+		#p8_l_fish2 {
+			top: 370px;
+			left: 134px;
+		}
+		#p8_l_fish3 {
+			top: 366px;
+			left: 296px;
+		}
+		#p8_l_fish4 {
+			top: 365px;
+			left: 351px;
+		}
+		#p8_l_fish5 {
+			top: 366px;
+			left: 407px;
 		}
 	</style>
 </head>
@@ -283,23 +337,63 @@
 		<div id="p8_back">
 			<img src="img/p3_back.png">
 		</div>
-		<div id="p8_cont_bg">
-			<img src="img/p4_cont_bg.png">
+		<div id="p8_first">
+			<div id="p8_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p8_pic1">
+				<img src="img/p8_pic1.png">
+			</div>
+			<div id="p8_pic2">
+				<img src="img/p8_pic2.png">
+			</div>
+			<div id="p8_man">
+				<img src="img/p8_man.png">
+			</div>
+			<div id="p8_pic3">
+				<img src="img/p8_pic3.png">
+			</div>
 		</div>
-		<div id="p8_pic1">
-			<img src="img/p8_pic1.png">
-		</div>
-		<div id="p8_pic2">
-			<img src="img/p8_pic2.png">
-		</div>
-		<div id="p8_man">
-			<img src="img/p8_man.png">
-		</div>
-		<div id="p8_pic3">
-			<img src="img/p8_pic3.png">
+		<div id="p8_last">
+			<div id="p8_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p8_l_p1">
+				<img src="img/p8_l_p1.png">
+			</div>
+			<div id="p8_l_p2">
+				<img src="img/p8_l_p2.png">
+			</div>
+			<div id="p8_l_fish1">
+				<img src="img/p8_l_fish.png">
+			</div>
+			<div id="p8_l_fish2">
+				<img src="img/p8_l_fish.png">
+			</div>
+			<div id="p8_l_fish3">
+				<img src="img/p8_l_fish.png">
+			</div>
+			<div id="p8_l_fish4">
+				<img src="img/p8_l_fish.png">
+			</div>
+			<div id="p8_l_fish5">
+				<img src="img/p8_l_fish.png">
+			</div>
+			<div id="p8_l_p3">
+				<img src="img/p8_l_p3.png">
+			</div>
+			<div id="p8_l_t">
+				<img src="img/p8_l_t.png">
+			</div>
+			<div id="p8_l_bg">
+				<img src="img/p8_l_bg.png">
+			</div>
+			<div id="p8_l_man">
+				<img src="img/p8_l_man.png">
+			</div>
 		</div>
 		<div id="p8_text1">
-			<img src="img/p5_text1.png">
+			<img src="img/p4_text1.png">
 		</div>
 		<div id="p8_text2">
 			<img src="img/p8_text2.png">
@@ -316,7 +410,39 @@
 	</div>
 <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
 <script type="text/javascript">
+$(function(){
+	var onOff = false;
+	$('#p8_back').on('click',function(){
+		window.location.replace('page3.html')
+	})
+	$('#p8_prev').on('click',function() {
+		window.location.href='page8.html'
+	})
+	$('#p8_next').on('click',function() {
+		window.location.href='page10.html'
+	})
+	$('#p8_random').on('click',function () {
+		if (!onOff) {
+			$('#p8_text2').fadeOut('slow',function () {
+				$('#p8_text2').children('img').attr('style','width:70%;margin-left:15%')
+				$('#p8_text2')[0].children[0].src='img/p8_text3.png';
+			})
+			$('#p8_first').removeClass().addClass("ro1");
+			$('#p8_last').removeClass().addClass("ro2")
+		}else {
+			$('#p8_text2').fadeOut('slow',function () {
+				$('#p8_text2').children('img').removeAttr('style')
+				$('#p8_text2')[0].children[0].src='img/p8_text2.png';
+			})
 
+			$('#p8_first')[0].style.opacity = 0;
+			$('#p8_first').removeClass().addClass("ro2")
+			$('#p8_last').removeClass().addClass("ro1")
+		}
+		$('#p8_text2').fadeIn('slow')
+		onOff = !onOff;
+	})
+})
 </script>
 </body>
 </html>

@@ -3,6 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
 	<style type="text/css">
 		/*@keyframes pic1{
 			0% {transform: translateX(0px) translateY(0px);}
@@ -108,7 +119,7 @@
 			width: 168px;
 			height: 188px;
 		}
-		#p8_man {	
+		#p8_man {
 			position: absolute;
 			top: 348px;
 			left: 110px;
@@ -288,7 +299,7 @@
 			<img src="img/p8_pic3.png">
 		</div>
 		<div id="p8_text1">
-			<img src="img/p7_text1.png">
+			<img src="img/p5_text1.png">
 		</div>
 		<div id="p8_text2">
 			<img src="img/p8_text2.png">
@@ -305,15 +316,7 @@
 	</div>
 <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
 <script type="text/javascript">
-	$(function(){
-		var w = window.screen.width;
-		var targetW = 640;
-		var scale = w/targetW; //当前尺寸/目标尺寸
-		var meta = document.createElement("meta");
-		meta.name = "viewport";
-		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
-		document.head.appendChild(meta);
-	})
+
 </script>
 </body>
 </html>

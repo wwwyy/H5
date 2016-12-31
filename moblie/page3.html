@@ -7,7 +7,7 @@
 	(function(){
 		var w = window.screen.width;
 			var targetW = 640;
-			var scale = w/targetW; 
+			var scale = w/targetW;
 			var meta = document.createElement("meta");
 			meta.name = "viewport";
 			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
@@ -347,12 +347,22 @@
 			left: -290px;
 			width: 458px;
 			height: 215px;
-			z-index: 5;
+			z-index: 1;
 			overflow: hidden;
 			animation: cloud3 3s infinite ease-in-out;
 		}
 		#p3_cloud3 img{
 			animation: opa 1.5s ease-in-out;
+		}
+		#p3_who {
+			position: absolute;
+			top: 130px;
+			left: 296px;
+			width: 34px;
+			height: 56px;
+			z-index: 99;
+			overflow: hidden;
+			animation: opa 3s infinite ease-in-out;
 		}
 	</style>
 </head>
@@ -414,6 +424,9 @@
 		</div>
 		<div id="p3_hand">
 			<img src="img/p3_hand.png">
+		</div>
+		<div id="p3_who">
+			<img src="img/p3_who.png">
 		</div>
 	</div>
 <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>

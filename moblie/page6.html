@@ -3,32 +3,66 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
 	<style type="text/css">
-		/*@keyframes pic1{
+		@keyframes pic1{
 			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(10px) translateY(10px);}
+			50% {transform: translateX(-8px) translateY(-8px);}
 			100% {transform: translateX(0px) translateY(0px);}
 		}
 		@keyframes pic2{
 			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(-10px) translateY(-10px);}
+			50% {transform: translateX(-6px) translateY(8px);}
 			100% {transform: translateX(0px) translateY(0px);}
 		}
 		@keyframes pic3{
 			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(15px);}
+			50% {transform: translateX(8px) translateY(8px);}
 			100% {transform: translateX(0px) translateY(0px);}
 		}
-		@keyframes pic4{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(5px) translateY(5px);}
-			100% {transform: translateX(0px) translateY(0px);}
+		@keyframes box{
+			0% {transform:scale(0);}
+			100% {transform: scale(1);}
 		}
-		@keyframes pic5{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(-5px) translateY(-5px);}
-			100% {transform: translateX(0px) translateY(0px);}
-		}*/
+		@keyframes box_t1{
+			0% {opacity: 0}
+			100% {opacity: 1;}
+		}
+		@keyframes box_t2{
+			0% {opacity: 0;transform: translateY(30px);}
+			100% {opacity: 1;transform: translateY(0);}
+		}
+		@keyframes box_t3{
+			0% {opacity: 0;transform:scale(0);}
+			50% {opacity: 1;transform:scale(1.1);}
+			100% {opacity: 1;transform:scale(1);}
+		}
+		@keyframes box_t4{
+			0% {opacity: 0;transform: translateY(60px);}
+			100% {opacity: 1;transform: translateY(0);}
+		}
+		@keyframes box_close{
+			0% {opacity: 0; transform: rotateZ(-180deg);}
+			100% {opacity: 1; transform: rotateZ(0deg);}
+		}
+		@keyframes box_prev{
+			0% {opacity: 0; transform: translateX(80px);}
+			100% {opacity: 1; transform: translateX(0px);}
+		}
+		@keyframes box_next{
+			0% {opacity: 0; transform: translateX(-80px);}
+			100% {opacity: 1; transform: translateX(0px);}
+		}
 		*{
 			margin: 0;
 			padding: 0;
@@ -39,11 +73,13 @@
 			height: 100%;
 		}
 		#p12 {
+			position: relative;
 			width: 640px;
 			height: 1040px;
 			background:url(img/p2_bg.png) no-repeat 0 0;
 			-webkit-background-size: 100%;
 			background-size: 100%;
+			overflow: hidden;
 		}
 		#p12_back {
 			position: absolute;
@@ -51,12 +87,8 @@
 			left: 37px;
 			width: 54px;
 			height: 54px;
+			z-index: 999;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p12_back img {
-			width: 54px;
-			height: 54px;
 		}
 		#p12_pic1 {
 			position: absolute;
@@ -74,7 +106,7 @@
 			width: 79px;
 			height: 64px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic3 3s infinite ease-in-out;
 		}
 		#p12_pic3 {
 			position: absolute;
@@ -83,7 +115,7 @@
 			width: 71px;
 			height: 78px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic2 3s infinite ease-in-out;
 		}
 		#p12_pic4 {
 			position: absolute;
@@ -101,7 +133,7 @@
 			width: 98px;
 			height: 81px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic2 3s infinite ease-in-out;
 		}
 		#p12_pic6 {
 			position: absolute;
@@ -110,7 +142,7 @@
 			width: 86px;
 			height: 77px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic3 3s infinite ease-in-out;
 		}
 		#p12_pic7 {
 			position: absolute;
@@ -128,7 +160,7 @@
 			width: 71px;
 			height: 68px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic2 3s infinite ease-in-out;
 		}
 		#p12_pic9 {
 			position: absolute;
@@ -146,7 +178,7 @@
 			width: 60px;
 			height: 72px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic3 3s infinite ease-in-out;
 		}
 		#p12_pic11 {
 			position: absolute;
@@ -155,7 +187,7 @@
 			width: 91px;
 			height: 137px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic2 3s infinite ease-in-out;
 		}
 		#p12_pic12 {
 			position: absolute;
@@ -173,7 +205,7 @@
 			width: 85px;
 			height: 71px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic3 3s infinite ease-in-out;
 		}
 		#p12_pic14 {
 			position: absolute;
@@ -182,7 +214,7 @@
 			width: 140px;
 			height: 55px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic2 3s infinite ease-in-out;
 		}
 		#p12_pic15 {
 			position: absolute;
@@ -191,7 +223,7 @@
 			width: 88px;
 			height: 85px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic3 3s infinite ease-in-out;
 		}
 		#p12_pic16 {
 			position: absolute;
@@ -209,7 +241,7 @@
 			width: 61px;
 			height: 61px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic3 3s infinite ease-in-out;
 		}
 		#p12_pic18 {
 			position: absolute;
@@ -227,16 +259,16 @@
 			width: 54px;
 			height: 56px;
 			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
+			animation: pic2 3s infinite ease-in-out;
 		}
-		#p12_man {	
+		#p12_man {
 			position: absolute;
 			top: 152px;
 			left: 204px;
 			width: 257px;
 			height: 288px;
 			overflow: hidden;
-			animation: pic2 4s infinite ease-in-out;
+			animation: pic24 4s infinite ease-in-out;
 		}
 		#p12_text1 {
 			position: absolute;
@@ -277,6 +309,205 @@
 			width: 181px;
 			height: 50px;
 			overflow: hidden;
+		}
+		.box {
+			position: absolute;
+			top: 542px;
+			left: 66px;
+			width: 514px;
+			height: 438px;
+			overflow: hidden;
+		}
+		#box1_t1 {
+			position: absolute;
+			top: 557px;
+			left: 173px;
+			width: 320px;
+			height: 62px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box1_t2 {
+			position: absolute;
+			top: 614px;
+			left: 142px;
+			width: 359px;
+			height: 58px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		.box_t3 {
+			position: absolute;
+			top: 682px;
+			left: 232px;
+			width: 177px;
+			height: 43px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box1_t4 {
+			position: absolute;
+			top: 729px;
+			left: 143px;
+			width: 358px;
+			height: 127px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		.box_t5 {
+			position: absolute;
+			top: 856px;
+			left: 161px;
+			width: 318px;
+			height: 53px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box2_t1 {
+			position: absolute;
+			top: 550px;
+			left: 178px;
+			width: 304px;
+			height: 58px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box2_t2 {
+			position: absolute;
+			top: 618px;
+			left: 183px;
+			width: 281px;
+			height: 49px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box2_t4 {
+			position: absolute;
+			top: 728px;
+			left: 125px;
+			width: 398px;
+			height: 118px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box3_t1 {
+			position: absolute;
+			top: 554px;
+			left: 154px;
+			width: 336px;
+			height: 50px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box3_t2 {
+			position: absolute;
+			top: 617px;
+			left: 133px;
+			width: 378px;
+			height: 56px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box3_t4 {
+			position: absolute;
+			top: 740px;
+			left: 115px;
+			width: 419px;
+			height: 112px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box4_t1 {
+			position: absolute;
+			top: 550px;
+			left: 213px;
+			width: 233px;
+			height: 59px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box4_t2 {
+			position: absolute;
+			top: 618px;
+			left: 181px;
+			width: 280px;
+			height: 52px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box4_t4 {
+			position: absolute;
+			top: 740px;
+			left: 115px;
+			width: 427px;
+			height: 118px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box5_t1 {
+			position: absolute;
+			top: 552px;
+			left: 218px;
+			width: 208px;
+			height: 59px;
+			overflow: hidden;
+			opacity: 0;
+		}
+		#box5_t2 {
+			position: absolute;
+			top: 618px;
+			left: 189px;
+			width: 255px;
+			height: 57px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box5_t4 {
+			position: absolute;
+			top: 738px;
+			left: 153px;
+			width: 351px;
+			height: 137px;
+			opacity: 0;
+			overflow: hidden;
+		}
+		#box5 .box_t5 {
+			top:869px;
+		}
+		.prev,
+		.next {
+			position: absolute;
+			top: 729px;
+			left: 66px;
+			width: 50px;
+			height: 64px;
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		.next {
+			left: 537px;
+			transform: translateX(-50px);
+		}
+		.close {
+			position: absolute;
+			top: 919px;
+			left: 287px;
+			width: 77px;
+			height: 72px;
+			opacity: 0;
+			transform: rotateZ(-180deg);
+		}
+		#box1,
+		#box2,
+		#box3,
+		#box4,
+		#box5 {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 300px;
 		}
 	</style>
 </head>
@@ -360,18 +591,205 @@
 		<div id="p12_text5">
 			<img src="img/p12_text5.png">
 		</div>
+		<div id="box1">
+			<div class="box">
+				<img src="img/box.png">
+			</div>
+			<div id="box1_t1">
+				<img src="img/box1_t1.png">
+			</div>
+			<div id="box1_t2">
+				<img src="img/box1_t2.png">
+			</div>
+			<div class="box_t3">
+				<img src="img/box_t3.png">
+			</div>
+			<div id="box1_t4">
+				<img src="img/box1_t4.png">
+			</div>
+			<div class="box_t5">
+				<img src="img/box_t5.png">
+			</div>
+			<div class="prev">
+				<img src="img/box_prev.png">
+			</div>
+			<div class="next">
+				<img src="img/box_next.png">
+			</div>
+			<div class="close">
+				<img src="img/box_close.png">
+			</div>
+		</div>
+		<div id="box2">
+			<div class="box">
+				<img src="img/box.png">
+			</div>
+			<div id="box2_t1">
+				<img src="img/box2_t1.png">
+			</div>
+			<div id="box2_t2">
+				<img src="img/box2_t2.png">
+			</div>
+			<div class="box_t3">
+				<img src="img/box_t3.png">
+			</div>
+			<div id="box2_t4">
+				<img src="img/box2_t4.png">
+			</div>
+			<div class="box_t5">
+				<img src="img/box_t5.png">
+			</div>
+			<div class="prev">
+				<img src="img/box_prev.png">
+			</div>
+			<div class="next">
+				<img src="img/box_next.png">
+			</div>
+			<div class="close">
+				<img src="img/box_close.png">
+			</div>
+		</div>
+		<div id="box3">
+			<div class="box">
+				<img src="img/box.png">
+			</div>
+			<div id="box3_t1">
+				<img src="img/box3_t1.png">
+			</div>
+			<div id="box3_t2">
+				<img src="img/box3_t2.png">
+			</div>
+			<div class="box_t3">
+				<img src="img/box_t3.png">
+			</div>
+			<div id="box3_t4">
+				<img src="img/box3_t4.png">
+			</div>
+			<div class="box_t5">
+				<img src="img/box_t5.png">
+			</div>
+			<div class="prev">
+				<img src="img/box_prev.png">
+			</div>
+			<div class="next">
+				<img src="img/box_next.png">
+			</div>
+			<div class="close">
+				<img src="img/box_close.png">
+			</div>
+		</div>
+		<div id="box4">
+			<div class="box">
+				<img src="img/box.png">
+			</div>
+			<div id="box4_t1">
+				<img src="img/box4_t1.jpg">
+			</div>
+			<div id="box4_t2">
+				<img src="img/box4_t2.png">
+			</div>
+			<div class="box_t3">
+				<img src="img/box_t3.png">
+			</div>
+			<div id="box4_t4">
+				<img src="img/box4_t4.png">
+			</div>
+			<div class="box_t5">
+				<img src="img/box_t5.png">
+			</div>
+			<div class="prev">
+				<img src="img/box_prev.png">
+			</div>
+			<div class="next">
+				<img src="img/box_next.png">
+			</div>
+			<div class="close">
+				<img src="img/box_close.png">
+			</div>
+		</div>
+		<div id="box5">
+			<div class="box">
+				<img src="img/box.png">
+			</div>
+			<div id="box5_t1">
+				<img src="img/box5_t1.png">
+			</div>
+			<div id="box5_t2">
+				<img src="img/box5_t2.png">
+			</div>
+			<div class="box_t3">
+				<img src="img/box_t3.png">
+			</div>
+			<div id="box5_t4">
+				<img src="img/box5_t4.png">
+			</div>
+			<div class="box_t5">
+				<img src="img/box_t5.png">
+			</div>
+			<div class="prev">
+				<img src="img/box_prev.png">
+			</div>
+			<div class="next">
+				<img src="img/box_next.png">
+			</div>
+			<div class="close">
+				<img src="img/box_close.png">
+			</div>
+		</div>
 	</div>
 <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
 <script type="text/javascript">
-	$(function(){
-		var w = window.screen.width;
-		var targetW = 640;
-		var scale = w/targetW; //当前尺寸/目标尺寸
-		var meta = document.createElement("meta");
-		meta.name = "viewport";
-		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
-		document.head.appendChild(meta);
+$(function(){
+	var onOff = false;
+	$('#p12_back').on('click',function(){
+		window.location.replace('page3.html')
 	})
+	$('#p12').on('click',function(ev){
+		if ($(ev.target).parent().attr('id')) {
+			if ($(ev.target).parent().attr('id').indexOf('p12_text')!='-1') {
+				boxShow(ev)
+			}
+
+		}
+	})
+	$('.close').on('click',function(ev){
+		$(this).parent().hide()
+		$(this).parent().children().removeAttr('style')
+	})
+	$('.prev').on('click',function(ev){
+		var num = $(this).parent().attr('id').substring(($(this).parent().attr('id').length)-1);
+		var prev = parseInt(num) - 1 ;
+		if (prev<1) {
+			prev = 5
+		}
+		$(this).parent().hide()
+		$(this).parent().children().removeAttr('style')
+		boxShow(ev,prev)
+	})
+	$('.next').on('click',function(ev){
+		var num = $(this).parent().attr('id').substring(($(this).parent().attr('id').length)-1);
+		var next = parseInt(num) + 1;
+		if (next >5) {
+			next = 1;
+		}
+		$(this).parent().hide()
+		$(this).parent().children().removeAttr('style')
+		boxShow(ev,next)
+	})
+	function boxShow(ev,num) {
+		num = num || $(ev.target).parent().attr('id').substring(($(ev.target).parent().attr('id').length)-1);
+		$('#box'+num+'').show()
+		$('#box'+num+'').children().eq(0).attr('style','animation: box .5s ease-out;')
+		$('#box'+num+'').children().eq(1).attr('style','animation: box_t1 1s .5s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children().eq(5).attr('style','animation: box_t1 1s .5s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children().eq(2).attr('style','animation: box_t2 1s .5s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children().eq(3).attr('style','animation: box_t3 1s .5s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children().eq(4).attr('style','animation: box_t4 1s .5s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children('.close').attr('style','animation: box_close 1s .5s  ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children('.prev').attr('style','animation: box_prev 1.5s .5s  ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children('.next').attr('style','animation: box_next 1.5s .5s  ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+	}
+})
 </script>
 </body>
 </html>

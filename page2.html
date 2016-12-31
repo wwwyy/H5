@@ -7,7 +7,7 @@
 	(function(){
 		var w = window.screen.width;
 			var targetW = 640;
-			var scale = w/targetW; 
+			var scale = w/targetW;
 			var meta = document.createElement("meta");
 			meta.name = "viewport";
 			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
@@ -54,6 +54,11 @@
 		@keyframes p2_btn{
 			0% {transform: translateY(50px);}
 			100% {transform: translateY(0px);opacity: .5}
+		}
+		@keyframes p2_btnImg{
+			0% {opacity: 0;}
+			50% {opacity: 1;}
+			100% {opacity: 0;}
 		}
 		*{
 			margin: 0;
@@ -180,10 +185,14 @@
 			width: 65px;
 			height: 63px;
 			overflow: hidden;
-			opacity: .5;
+			opacity: 0;
 			animation: p2_btn 1s 4.6s ease-in-out;
 			-webkit-animation-fill-mode:forwards;
 			animation-fill-mode:forwards;
+		}
+		#p2_btn img{
+			opacity: 0;
+			animation: p2_btnImg 3s 5.6s infinite ease-in-out;
 		}
 	</style>
 </head>

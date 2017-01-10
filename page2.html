@@ -99,11 +99,16 @@
 		function is_weixin(){
 			var ua = navigator.userAgent.toLowerCase();
 			if(ua.match(/MicroMessenger/i)=="micromessenger") {
-				$("body").on("touchmove", touchMoveHide)
-				 function touchMoveHide(event){
-		 				event.preventDefault();
-		 		 };
-		 	}
+				return true;
+		 	} else {
+				return false;
+			}
+		}
+		if (is_weixin) {
+			$("body").on("touchmove", touchMoveHide)
+			 function touchMoveHide(event){
+	 				event.preventDefault();
+	 		 };
 		}
 
 		$('#p2_btn').click(function(){

@@ -75,6 +75,7 @@
 			var meta = document.createElement("meta");
 			meta.name = "viewport";
 			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			$('meta').last().remove()
 			document.head.appendChild(meta);
 		}
 		var imgdefereds=[];
@@ -117,7 +118,7 @@
 		           $("body").on("touchcancel touchend", touchEndShow);
 		         }
 		 };
-
+		$('#p1_scroll').on('click',touchEndShow)
 		function touchEndShow(event){
           	$('#p1').children('div:odd').animate({
 				top:'-1040',

@@ -96,10 +96,16 @@
 		  },200)
 		});
 
-		$("body").on("touchmove", touchMoveHide)
-		 function touchMoveHide(event){
- 				event.preventDefault();
- 		 };
+		function is_weixin(){
+			var ua = navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i)=="micromessenger") {
+				$("body").on("touchmove", touchMoveHide)
+				 function touchMoveHide(event){
+		 				event.preventDefault();
+		 		 };
+		 	}
+		}
+
 		$('#p2_btn').click(function(){
 			window.location.replace('page3.html')
 		})

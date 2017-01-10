@@ -15,54 +15,6 @@
 	})()
 	</script>
 	<style type="text/css">
-		@keyframes pic1{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(-8px) translateY(-8px);}
-			100% {transform: translateX(0px) translateY(0px);}
-		}
-		@keyframes pic2{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(-6px) translateY(8px);}
-			100% {transform: translateX(0px) translateY(0px);}
-		}
-		@keyframes pic3{
-			0% {transform: translateX(0px) translateY(0px);}
-			50% {transform: translateX(8px) translateY(8px);}
-			100% {transform: translateX(0px) translateY(0px);}
-		}
-		@keyframes box{
-			0% {transform:scale(0);}
-			100% {transform: scale(1);}
-		}
-		@keyframes box_t1{
-			0% {opacity: 0}
-			100% {opacity: 1;}
-		}
-		@keyframes box_t2{
-			0% {opacity: 0;transform: translateY(30px);}
-			100% {opacity: 1;transform: translateY(0);}
-		}
-		@keyframes box_t3{
-			0% {opacity: 0;transform:scale(0);}
-			50% {opacity: 1;transform:scale(1.1);}
-			100% {opacity: 1;transform:scale(1);}
-		}
-		@keyframes box_t4{
-			0% {opacity: 0;transform: translateY(60px);}
-			100% {opacity: 1;transform: translateY(0);}
-		}
-		@keyframes box_close{
-			0% {opacity: 0; transform: rotateZ(-180deg);}
-			100% {opacity: 1; transform: rotateZ(0deg);}
-		}
-		@keyframes box_prev{
-			0% {opacity: 0; transform: translateX(80px);}
-			100% {opacity: 1; transform: translateX(0px);}
-		}
-		@keyframes box_next{
-			0% {opacity: 0; transform: translateX(-80px);}
-			100% {opacity: 1; transform: translateX(0px);}
-		}
 		*{
 			margin: 0;
 			padding: 0;
@@ -73,445 +25,20 @@
 			height: 100%;
 		}
 		#p12 {
+			display: none;
+		}
+		#p12_bg {
 			position: relative;
 			width: 640px;
 			height: 1040px;
-			background:url(img/p2_bg.png) no-repeat 0 0;
-			-webkit-background-size: 100%;
-			background-size: 100%;
 			overflow: hidden;
-		}
-		#p12_back {
-			position: absolute;
-			top: 42px;
-			left: 37px;
-			width: 54px;
-			height: 54px;
-			z-index: 999;
-			overflow: hidden;
-		}
-		#p12_pic1 {
-			position: absolute;
-			top: 206px;
-			left: 7px;
-			width: 68px;
-			height: 69px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p12_pic2 {
-			position: absolute;
-			top: 138px;
-			left: 75px;
-			width: 79px;
-			height: 64px;
-			overflow: hidden;
-			animation: pic3 3s infinite ease-in-out;
-		}
-		#p12_pic3 {
-			position: absolute;
-			top: 256px;
-			left: 80px;
-			width: 71px;
-			height: 78px;
-			overflow: hidden;
-			animation: pic2 3s infinite ease-in-out;
-		}
-		#p12_pic4 {
-			position: absolute;
-			top: 326px;
-			left: 45px;
-			width: 101px;
-			height: 98px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p12_pic5 {
-			position: absolute;
-			top: 43px;
-			left: 232px;
-			width: 98px;
-			height: 81px;
-			overflow: hidden;
-			animation: pic2 3s infinite ease-in-out;
-		}
-		#p12_pic6 {
-			position: absolute;
-			top: 139px;
-			left: 182px;
-			width: 86px;
-			height: 77px;
-			overflow: hidden;
-			animation: pic3 3s infinite ease-in-out;
-		}
-		#p12_pic7 {
-			position: absolute;
-			top: 225px;
-			left: 148px;
-			width: 74px;
-			height: 51px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p12_pic8 {
-			position: absolute;
-			top: 281px;
-			left: 193px;
-			width: 71px;
-			height: 68px;
-			overflow: hidden;
-			animation: pic2 3s infinite ease-in-out;
-		}
-		#p12_pic9 {
-			position: absolute;
-			top: 315px;
-			left: 159px;
-			width: 44px;
-			height: 68px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p12_pic10 {
-			position: absolute;
-			top: 392px;
-			left: 140px;
-			width: 60px;
-			height: 72px;
-			overflow: hidden;
-			animation: pic3 3s infinite ease-in-out;
-		}
-		#p12_pic11 {
-			position: absolute;
-			top: 32px;
-			left: 360px;
-			width: 91px;
-			height: 137px;
-			overflow: hidden;
-			animation: pic2 3s infinite ease-in-out;
-		}
-		#p12_pic12 {
-			position: absolute;
-			top: 149px;
-			left: 404px;
-			width: 91px;
-			height: 75px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p12_pic13 {
-			position: absolute;
-			top: 269px;
-			left: 413px;
-			width: 85px;
-			height: 71px;
-			overflow: hidden;
-			animation: pic3 3s infinite ease-in-out;
-		}
-		#p12_pic14 {
-			position: absolute;
-			top: 447px;
-			left: 314px;
-			width: 140px;
-			height: 55px;
-			overflow: hidden;
-			animation: pic2 3s infinite ease-in-out;
-		}
-		#p12_pic15 {
-			position: absolute;
-			top: 108px;
-			left: 522px;
-			width: 88px;
-			height: 85px;
-			overflow: hidden;
-			animation: pic3 3s infinite ease-in-out;
-		}
-		#p12_pic16 {
-			position: absolute;
-			top: 206px;
-			left: 500px;
-			width: 62px;
-			height: 62px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p12_pic17 {
-			position: absolute;
-			top: 250px;
-			left: 565px;
-			width: 61px;
-			height: 61px;
-			overflow: hidden;
-			animation: pic3 3s infinite ease-in-out;
-		}
-		#p12_pic18 {
-			position: absolute;
-			top: 307px;
-			left: 467px;
-			width: 114px;
-			height: 116px;
-			overflow: hidden;
-			animation: pic1 3s infinite ease-in-out;
-		}
-		#p12_pic19 {
-			position: absolute;
-			top: 420px;
-			left: 462px;
-			width: 54px;
-			height: 56px;
-			overflow: hidden;
-			animation: pic2 3s infinite ease-in-out;
-		}
-		#p12_man {
-			position: absolute;
-			top: 152px;
-			left: 204px;
-			width: 257px;
-			height: 288px;
-			overflow: hidden;
-			animation: pic24 4s infinite ease-in-out;
-		}
-		#p12_text1 {
-			position: absolute;
-			top: 544px;
-			left: 165px;
-			width: 319px;
-			height: 60px;
-			overflow: hidden;
-		}
-		#p12_text2 {
-			position: absolute;
-			top: 629px;
-			left: 118px;
-			width: 401px;
-			height: 60px;
-			overflow: hidden;
-		}
-		#p12_text3 {
-			position: absolute;
-			top: 714px;
-			left: 139px;
-			width: 360px;
-			height: 56px;
-			overflow: hidden;
-		}
-		#p12_text4 {
-			position: absolute;
-			top: 787px;
-			left: 234px;
-			width: 170px;
-			height: 47px;
-			overflow: hidden;
-		}
-		#p12_text5 {
-			position: absolute;
-			top: 862px;
-			left: 227px;
-			width: 181px;
-			height: 50px;
-			overflow: hidden;
-		}
-		.box {
-			position: absolute;
-			top: 542px;
-			left: 66px;
-			width: 514px;
-			height: 438px;
-			overflow: hidden;
-		}
-		#box1_t1 {
-			position: absolute;
-			top: 557px;
-			left: 173px;
-			width: 320px;
-			height: 62px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box1_t2 {
-			position: absolute;
-			top: 614px;
-			left: 142px;
-			width: 359px;
-			height: 58px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		.box_t3 {
-			position: absolute;
-			top: 682px;
-			left: 232px;
-			width: 177px;
-			height: 43px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box1_t4 {
-			position: absolute;
-			top: 729px;
-			left: 143px;
-			width: 358px;
-			height: 127px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		.box_t5 {
-			position: absolute;
-			top: 856px;
-			left: 161px;
-			width: 318px;
-			height: 53px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box2_t1 {
-			position: absolute;
-			top: 550px;
-			left: 178px;
-			width: 304px;
-			height: 58px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box2_t2 {
-			position: absolute;
-			top: 618px;
-			left: 183px;
-			width: 281px;
-			height: 49px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box2_t4 {
-			position: absolute;
-			top: 728px;
-			left: 125px;
-			width: 398px;
-			height: 118px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box3_t1 {
-			position: absolute;
-			top: 554px;
-			left: 154px;
-			width: 336px;
-			height: 50px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box3_t2 {
-			position: absolute;
-			top: 617px;
-			left: 133px;
-			width: 378px;
-			height: 56px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box3_t4 {
-			position: absolute;
-			top: 740px;
-			left: 115px;
-			width: 419px;
-			height: 112px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box4_t1 {
-			position: absolute;
-			top: 550px;
-			left: 213px;
-			width: 233px;
-			height: 59px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box4_t2 {
-			position: absolute;
-			top: 618px;
-			left: 181px;
-			width: 280px;
-			height: 52px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box4_t4 {
-			position: absolute;
-			top: 740px;
-			left: 115px;
-			width: 427px;
-			height: 118px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box5_t1 {
-			position: absolute;
-			top: 552px;
-			left: 218px;
-			width: 208px;
-			height: 59px;
-			overflow: hidden;
-			opacity: 0;
-		}
-		#box5_t2 {
-			position: absolute;
-			top: 618px;
-			left: 189px;
-			width: 255px;
-			height: 57px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box5_t4 {
-			position: absolute;
-			top: 738px;
-			left: 153px;
-			width: 351px;
-			height: 137px;
-			opacity: 0;
-			overflow: hidden;
-		}
-		#box5 .box_t5 {
-			top:869px;
-		}
-		.prev,
-		.next {
-			position: absolute;
-			top: 729px;
-			left: 66px;
-			width: 50px;
-			height: 64px;
-			opacity: 0;
-			transform: translateX(50px);
-		}
-		.next {
-			left: 537px;
-			transform: translateX(-50px);
-		}
-		.close {
-			position: absolute;
-			top: 919px;
-			left: 287px;
-			width: 77px;
-			height: 72px;
-			opacity: 0;
-			transform: rotateZ(-180deg);
-		}
-		#box1,
-		#box2,
-		#box3,
-		#box4,
-		#box5 {
-			display: none;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 300px;
 		}
 	</style>
 </head>
 <body>
+	<div id="p12_bg">
+		<img src="img/p2_bg.png" alt="">
+	</div>
 	<div id="p12">
 		<div id="p12_back">
 			<img src="img/p3_back.png">
@@ -740,6 +267,29 @@
 <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
 <script type="text/javascript">
 $(function(){
+	var imgdefereds=[];
+	$('img').each(function(){
+	 var dfd=$.Deferred();
+	 $(this).bind('load',function(){
+	 dfd.resolve();
+	 }).bind('error',function(){
+	 //图片加载错误，加入错误处理
+	 // dfd.resolve();
+	 })
+	 if(this.complete) setTimeout(function(){
+	 dfd.resolve();
+	 },100);
+	 imgdefereds.push(dfd);
+	})
+	$.when.apply(null,imgdefereds).done(function(){
+		var css = '<link rel="stylesheet" href="css/style.css" type="text/css" />'
+		$('head')[0].innerHTML += css;
+		setTimeout(function(){
+			$('#p12_bg').hide()
+			$('#p12').show()
+		},200)
+	});
+
 	var onOff = false;
 	$('#p12_back').on('click',function(){
 		window.location.replace('page3.html')

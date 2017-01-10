@@ -96,15 +96,11 @@
 		  },200)
 		});
 
-		$("body").on("touchstart", touchStartRecord).on("touchmove", touchMoveHide)
-		function touchStartRecord(event){
-				event.preventDefault();
-		 };
+		$("body").on("touchmove", touchMoveHide)
 		 function touchMoveHide(event){
  				event.preventDefault();
  		 };
-		$('#p2_btn').tigger('click')
-		$('#p2_btn').bind('click',function() {
+		$('#p2_btn').on('click',function(){
 			window.location.replace('page3.html')
 		})
 	})

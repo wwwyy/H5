@@ -103,9 +103,11 @@
 		 function touchMoveHide(event){
  				event.preventDefault();
  		 };
-		$('#p2_btn').on('click',function(){
+		$('#p2_btn').tigger('page')
+
+		function page() {
 			window.location.replace('page3.html')
-		})
+		}
 	})
 </script>
 </body>

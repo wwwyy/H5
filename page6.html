@@ -291,6 +291,12 @@ $(function(){
 	});
 
 	var onOff = false;
+
+	$("body").on("touchstart", touchStartRecord)
+	function touchStartRecord(event){
+			event.preventDefault();
+	 };
+	 
 	$('#p12_back').on('click',function(){
 		window.location.replace('page3.html')
 	})

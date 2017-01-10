@@ -96,6 +96,11 @@
 		  },200)
 		});
 
+		$("body").on("touchstart", touchStartRecord)
+
+		function touchStartRecord(event){
+				event.preventDefault();
+		 };
 		$('#p2_btn').on('click',function(){
 			window.location.replace('page3.html')
 		})

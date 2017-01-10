@@ -173,6 +173,11 @@ $(function(){
 	  },200)
 	});
 
+	$("body").on("touchstart", touchStartRecord)
+	function touchStartRecord(event){
+			event.preventDefault();
+	};
+
 	$('#p11_back').on('click',function(){
 		window.location.replace('page3.html')
 	})

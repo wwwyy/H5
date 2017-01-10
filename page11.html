@@ -136,6 +136,11 @@ $(function(){
 	});
 
 
+	$("body").on("touchstart", touchStartRecord)
+	function touchStartRecord(event){
+			event.preventDefault();
+	};
+
 	$('#p10_back').on('click',function(){
 		window.location.replace('page3.html')
 	})

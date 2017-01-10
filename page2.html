@@ -104,7 +104,7 @@
 				return false;
 			}
 		}
-		if (is_weixin) {
+		if (is_weixin()) {
 			$("body").on("touchmove", touchMoveHide)
 			 function touchMoveHide(event){
 	 				event.preventDefault();

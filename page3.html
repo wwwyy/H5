@@ -126,11 +126,14 @@
 		},200)
 	});
 
-	$("body").on("touchstart", touchStartRecord)
+	$("body").on("touchstart", touchStartRecord).on("touchmove", touchMoveHide)
 	function touchStartRecord(event){
 			event.preventDefault();
 	 };
-	 
+	 function touchMoveHide(event){
+			event.preventDefault();
+	 };
+
 	$('#p3_back').on('click',function(){
 		window.location.replace('page2.html')
 	})

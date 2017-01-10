@@ -125,11 +125,14 @@
 	   		},200)
 		});
 		var onOff = false;
-		
-		$("body").on("touchstart", touchStartRecord)
+
+		$("body").on("touchstart", touchStartRecord).on("touchmove", touchMoveHide)
 		function touchStartRecord(event){
 				event.preventDefault();
 		 };
+		 function touchMoveHide(event){
+ 				event.preventDefault();
+ 		 };
 
 		$('#p4_back').on('click',function(){
 			window.location.replace('page3.html')

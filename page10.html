@@ -139,10 +139,13 @@ $(function(){
 	  },200)
 	});
 
-	$("body").on("touchstart", touchStartRecord)
+	$("body").on("touchstart", touchStartRecord).on("touchmove", touchMoveHide)
 	function touchStartRecord(event){
 			event.preventDefault();
-	};
+	 };
+	 function touchMoveHide(event){
+			event.preventDefault();
+	 };
 
 	$('#p9_back').on('click',function(){
 		window.location.replace('page3.html')

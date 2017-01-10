@@ -6,12 +6,13 @@
 	<script type="text/javascript">
 	(function(){
 		var w = window.screen.width;
-			var targetW = 640;
-			var scale = w/targetW;
-			var meta = document.createElement("meta");
-			meta.name = "viewport";
-			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
-			document.head.appendChild(meta);
+		var targetW = 640;
+		var scale = w/targetW;
+		var meta = document.createElement("meta");
+		meta.name = "viewport";
+		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+		document.head.appendChild(meta);
+		webSettings.setUseWideViewPort（true）
 	})()
 	</script>
 	<style type="text/css">

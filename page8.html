@@ -154,13 +154,20 @@ $(function(){
 	});
 
 
-	$("body").on("touchstart", touchStartRecord).on("touchmove", touchMoveHide)
-	function touchStartRecord(event){
-			event.preventDefault();
-	 };
-	 function touchMoveHide(event){
-			event.preventDefault();
-	 };
+	function is_weixin(){
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i)=="micromessenger") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	if (is_weixin()) {
+		$("body").on("touchmove", touchMoveHide)
+		 function touchMoveHide(event){
+				event.preventDefault();
+		 };
+	}
 
 	$('#p7_back').on('click',function(){
 		window.location.replace('page3.html')

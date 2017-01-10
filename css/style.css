@@ -57,12 +57,15 @@ img {
     height: 1040px;
     overflow: hidden;
     animation: pic1 3s infinite ease-in-out;
+    -webkit-animation :pic1 3s infinite ease-in-out;
 }
 #p1_pic2 {
     animation: pic2 3s infinite ease-in-out;
+    -webkit-animation: pic2 3s infinite ease-in-out;
 }
 #p1_pic3 {
     animation: pic3 3s infinite ease-in-out;
+    -webkit-animation: pic3 3s infinite ease-in-out;
 }
 #p1_pic4 {
     position: absolute;
@@ -72,6 +75,7 @@ img {
     height: 306px;
     overflow: hidden;
     animation: pic4 3s infinite ease-in-out;
+    -webkit-animation: pic4 3s infinite ease-in-out;
 }
 #p1_pic5 {
     position: absolute;
@@ -81,6 +85,7 @@ img {
     height: 306px;
     overflow: hidden;
     animation: pic5 3s infinite ease-in-out;
+    -webkit-animation: pic5 3s infinite ease-in-out;
 }
 #p1_pic6 {
     position: absolute;
@@ -106,6 +111,7 @@ img {
     height: 51px;
     overflow: hidden;
     animation: scroll 1.5s infinite ease-in-out;
+    -webkit-animation: scroll 1.5s infinite ease-in-out;
 }
 /*----------------------p2----------------*/
 
@@ -182,6 +188,7 @@ img {
     height: 90px;
     overflow: hidden;
     animation: p2_logo 1s ease-in-out;
+    -webkit-animation: p2_logo 1s ease-in-out;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
@@ -193,6 +200,7 @@ img {
     height: 98px;
     overflow: hidden;
     animation: p2_text1 1s 1s cubic-bezier(0.175, 0.885, 0.32, 2);
+    -webkit-animation: p2_text1 1s 1s cubic-bezier(0.175, 0.885, 0.32, 2);
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
@@ -203,6 +211,7 @@ img {
     width: 79px;
     height: 123px;
     animation: p2_ico1 1s 2s ease-in-out;
+    -webkit-animation: p2_ico1 1s 2s ease-in-out;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
@@ -214,6 +223,7 @@ img {
     height: 140px;
     overflow: hidden;
     animation: p2_ico2 1s 2s ease-in-out;
+    -webkit-animation: p2_ico2 1s 2s ease-in-out;;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
@@ -225,6 +235,7 @@ img {
     height: 134px;
     overflow: hidden;
     animation: p2_ico3 1s 2s ease-in-out;
+    -webkit-animation: p2_ico3 1s 2s ease-in-out;;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
@@ -236,6 +247,7 @@ img {
     height: 47px;
     overflow: hidden;
     animation: p2_text2 1s 3s ease-in-out;
+    -webkit-animation: p2_text2 1s 3s ease-in-out;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
@@ -247,6 +259,7 @@ img {
     height: 43px;
     overflow: hidden;
     animation: p2_text3 1s 4s ease-in-out;
+    -webkit-animation: p2_text3 1s 4s ease-in-out;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
@@ -258,6 +271,7 @@ img {
     height: 72px;
     overflow: hidden;
     animation: p2_cust1 1s 4.2s ease-in-out;
+    -webkit-animation: p2_cust1 1s 4.2s ease-in-out;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
@@ -269,6 +283,7 @@ img {
     height: 39px;
     overflow: hidden;
     animation: p2_cust2 1s 4.4s ease-in-out;
+    -webkit-animation: p2_cust2 1s 4.4s ease-in-out;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
@@ -281,12 +296,14 @@ img {
     overflow: hidden;
     opacity: 0;
     animation: p2_btn 1s 4.6s ease-in-out;
+    -webkit-animation: p2_btn 1s 4.6s ease-in-out;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
 #p2_btn img{
     opacity: 0;
     animation: p2_btnImg 3s 5.6s infinite ease-in-out;
+    -webkit-animation: p2_btnImg 3s 5.6s infinite ease-in-out;
 }
 
 /*-------------------p3------------------*/
@@ -397,6 +414,7 @@ img {
 }
 #p3_back img {
     animation: opa 1.5s ease-in-out;
+    -webkit-animation: opa 1.5s ease-in-out;
 }
 #p3_men1 {
     position: absolute;
@@ -407,10 +425,12 @@ img {
     overflow: hidden;
     z-index: 1;
     animation: men 2s infinite ease-in-out;
+    -webkit-animation: men 2s infinite ease-in-out;
 }
 #p3_men1 img {
     transform-origin: right;
     animation: men1 .8s ease-in-out;
+    -webkit-animation: men1 .8s ease-in-out;
 }
 #p3_men2 {
     position: absolute;
@@ -420,10 +440,12 @@ img {
     height: 314px;
     z-index: 1;
     animation: men 2s 0.3s infinite ease-in-out;
+    -webkit-animation: men 2s 0.3s infinite ease-in-out;
 }
 #p3_men2 img{
     transform-origin: left;
     animation: men2 .8s ease-in-out;
+    -webkit-animation: men2 .8s ease-in-out;
 }
 #p3_men3 {
     position: absolute;
@@ -434,6 +456,7 @@ img {
     overflow: hidden;
     z-index: 3;
     animation: men 2s 0.6s infinite ease-in-out;
+    -webkit-animation: men 2s 0.6s infinite ease-in-out;
 }
 #p3_men3 img {
     animation: men3 1s ease-in-out;
@@ -447,9 +470,11 @@ img {
     overflow: hidden;
     z-index: 3;
     animation: men 2s 0.9s infinite ease-in-out;
+    -webkit-animation: men 2s 0.9s infinite ease-in-out;
 }
 #p3_men4 img {
     animation: men4 1s ease-in-out;
+    -webkit-animation: men4 1s ease-in-out;
 }
 #p3_men5 {
     position: absolute;
@@ -460,9 +485,11 @@ img {
     z-index: 3;
     overflow: hidden;
     animation: men 2s infinite ease-in-out;
+    -webkit-animation: men 2s infinite ease-in-out;
 }
 #p3_men5 img {
     animation: men5 1s ease-in-out;
+    -webkit-animation: men5 1s ease-in-out;
 }
 #p3_men6 {
     position: absolute;
@@ -473,9 +500,11 @@ img {
     z-index: 3;
     overflow: hidden;
     animation: men 2s infinite ease-in-out;
+    -webkit-animation: men 2s infinite ease-in-out;
 }
 #p3_men6 img {
     animation: men6 1s ease-in-out;
+    -webkit-animation: men6 1s ease-in-out;
 }
 #p3_car {
     position: absolute;
@@ -486,9 +515,11 @@ img {
     z-index: 2;
     overflow: hidden;
     animation: car 2s 0.4s infinite ease-in-out;
+    -webkit-animation: car 2s 0.4s infinite ease-in-out;
 }
 #p3_car img {
     animation: carImg 1s ease-in-out;
+    -webkit-animation: carImg 1s ease-in-out;
 }
 #p3_men7 {
     position: absolute;
@@ -499,9 +530,11 @@ img {
     z-index: 3;
     overflow: hidden;
     animation: car 2s 0.4s infinite ease-in-out;
+    -webkit-animation: car 2s 0.4s infinite ease-in-out;
 }
 #p3_men7 img {
     animation: men5 1s ease-in-out;
+    -webkit-animation: men5 1s ease-in-out;
 }
 #p3_men8 {
     position: absolute;
@@ -512,9 +545,11 @@ img {
     overflow: hidden;
     z-index: 3;
     animation: car 2s 0.4s infinite ease-in-out;
+    -webkit-animation: car 2s 0.4s infinite ease-in-out;
 }
 #p3_men8 img{
     animation: men8 1s ease-in-out;
+    -webkit-animation: men8 1s ease-in-out;
 }
 #p3_men9 {
     position: absolute;
@@ -525,9 +560,11 @@ img {
     z-index: 3;
     overflow: hidden;
     animation: car 2s 0.4s infinite ease-in-out;
+    -webkit-animation: car 2s 0.4s infinite ease-in-out;
 }
 #p3_men9 img {
     animation: men5 1s ease-in-out;
+    -webkit-animation: men5 1s ease-in-out;
 }
 #p3_logo {
     position: absolute;
@@ -538,6 +575,7 @@ img {
     z-index: 3;
     overflow: hidden;
     animation: car 2s 0.4s infinite ease-in-out;
+    -webkit-animation: car 2s 0.4s infinite ease-in-out;
 }
 #p3_cat {
     position: absolute;
@@ -548,9 +586,11 @@ img {
     z-index: 3;
     overflow: hidden;
     animation: cat 1.5s infinite ease-in-out;
+    -webkit-animation: cat 1.5s infinite ease-in-out;
 }
 #p3_cat img {
     animation: opa 1.5s ease-in-out;
+    -webkit-animation: opa 1.5s ease-in-out;
 }
 #p3_hand {
     position: absolute;
@@ -561,9 +601,11 @@ img {
     z-index: 4;
     overflow: hidden;
     animation: car 2s 0.4s infinite ease-in-out;
+    -webkit-animation: car 2s 0.4s infinite ease-in-out;
 }
 #p3_hand img {
     animation: men5 1s ease-in-out;
+    -webkit-animation: men5 1s ease-in-out;
 }
 #p3_text1 {
     position: absolute;
@@ -574,9 +616,11 @@ img {
     z-index: 4;
     overflow: hidden;
     animation: car 2s 0.1s infinite ease-in-out;
+    -webkit-animation: car 2s 0.1s infinite ease-in-out;
 }
 #p3_text1 img {
     animation: opa 1.5s ease-in-out;
+    -webkit-animation: opa 1.5s ease-in-out;
 }
 #p3_text2 {
     position: absolute;
@@ -587,9 +631,11 @@ img {
     z-index: 4;
     overflow: hidden;
     animation: title 2s 0.1s infinite ease-in-out;
+    -webkit-animation: title 2s 0.1s infinite ease-in-out;
 }
 #p3_text2 img {
     animation: opa 1.5s ease-in-out;
+    -webkit-animation: opa 1.5s ease-in-out;
 }
 #p3_cloud1 {
     position: absolute;
@@ -600,9 +646,11 @@ img {
     z-index: 2;
     overflow: hidden;
     animation: cloud1 4s infinite ease-in-out;
+    -webkit-animation: cloud1 4s infinite ease-in-out;
 }
 #p3_cloud1 img {
     animation: opa 1.5s ease-in-out;
+    -webkit-animation: opa 1.5s ease-in-out;
 }
 #p3_cloud2 {
     position: absolute;
@@ -613,9 +661,11 @@ img {
     z-index: 4;
     overflow: hidden;
     animation: cloud2 3s infinite ease-in-out;
+    -webkit-animation: cloud2 3s infinite ease-in-out;
 }
 #p3_cloud2 img {
     animation: opa 1.5s ease-in-out;
+    -webkit-animation: opa 1.5s ease-in-out;
 }
 #p3_cloud3 {
     position: absolute;
@@ -626,9 +676,11 @@ img {
     z-index: 1;
     overflow: hidden;
     animation: cloud3 3s infinite ease-in-out;
+    -webkit-animation: cloud3 3s infinite ease-in-out;
 }
 #p3_cloud3 img{
     animation: opa 1.5s ease-in-out;
+    -webkit-animation: opa 1.5s ease-in-out;
 }
 #p3_who {
     position: absolute;
@@ -639,6 +691,7 @@ img {
     z-index: 99;
     overflow: hidden;
     animation: opa 3s infinite ease-in-out;
+    -webkit-animation: opa 3s infinite ease-in-out;
 }
 
 /*---------------p4-------------------*/
@@ -737,6 +790,7 @@ img {
     height: 687px;
     overflow: hidden;
     animation: pic1 3s infinite ease-in-out;
+    -webkit-animation: pic1 3s infinite ease-in-out;
 }
 #p4_first {
     position: absolute;
@@ -772,11 +826,13 @@ img {
     height: 66px;
     overflow: hidden;
     animation: p4_ball 4s infinite ease-in-out;
+    -webkit-animation: p4_ball 4s infinite ease-in-out;
 }
 #p4_ball img {
     idth: 69px;
     height: 66px;
     animation: imgDe 1s ease-in-out;
+    -webkit-animation: imgDe 1s ease-in-out;
 }
 #p4_ufo {
     position: absolute;
@@ -785,11 +841,13 @@ img {
     width: 105px;
     height: 68px;
     animation: p4_ufo 2s infinite ease-in-out;
+    -webkit-animation: p4_ufo 2s infinite ease-in-out;
 }
 #p4_ufo img {
     width: 105px;
     height: 68px;
     animation: imgDe 1s ease-in-out;
+    -webkit-animation: imgDe 1s ease-in-out;
 }
 #p4_ico1 {
     position: absolute;
@@ -799,11 +857,13 @@ img {
     height: 88px;
     overflow: hidden;
     animation: p4_ico1 3s infinite ease-in-out;
+    -webkit-animation: p4_ico1 3s infinite ease-in-out;
 }
 #p4_ico1 img {
     width: 50px;
     height: 88px;
     animation: imgDe 1s ease-in-out;
+    -webkit-animation: imgDe 1s ease-in-out;
 }
 #p4_ico2 {
     position: absolute;
@@ -813,11 +873,13 @@ img {
     height: 455px;
     overflow: hidden;
     animation: p4_ico2 3.5s infinite ease-in-out;
+    -webkit-animation: p4_ico2 3.5s infinite ease-in-out;
 }
 #p4_ico2 img {
     width: 461px;
     height: 455px;
     animation: imgDe 1s ease-in-out;
+    -webkit-animation: imgDe 1s ease-in-out;
 }
 #p4_ico3 {
     position: absolute;
@@ -827,11 +889,13 @@ img {
     height: 295px;
     overflow: hidden;
     animation: p4_ico3 5s infinite ease-in-out;
+    -webkit-animation: p4_ico3 5s infinite ease-in-out;
 }
 #p4_ico3 img {
     width: 400px;
     height: 295px;
     animation: img4 1.2s cubic-bezier(0.175, 0.885, 0.32, 2);
+    -webkit-animation: img4 1.2s cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 #p4_ico4 {
     position: absolute;
@@ -841,11 +905,13 @@ img {
     height: 316px;
     overflow: hidden;
     animation: p4_ico4 6s infinite ease-in-out;
+    -webkit-animation: p4_ico4 6s infinite ease-in-out;
 }
 #p4_ico4 img {
     width: 308px;
     height: 316px;
     animation: imgDe 1s ease-in-out;
+    -webkit-animation: imgDe 1s ease-in-out;
 }
 #p4_text1 {
     position: absolute;
@@ -903,6 +969,7 @@ img {
     height: 653px;
     overflow: hidden;
     animation: p4_l_l .8s infinite ease-in-out;
+    -webkit-animation: p4_l_l .8s infinite ease-in-out;
 }
 #p4_l_r {
     position: absolute;
@@ -912,6 +979,7 @@ img {
     height: 649px;
     overflow: hidden;
     animation: p4_l_r .8s .1s infinite ease-in-out;
+    -webkit-animation: p4_l_r .8s .1s infinite ease-in-out;
 }
 #p4_l_b {
     position: absolute;
@@ -931,12 +999,14 @@ img {
 }
 #p4 .ro1 {
     animation: ro1 1s ease-in-out;
+    -webkit-animation: ro1 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
 #p4 .ro2 {
     animation: ro2 1s 1s ease-in-out;
+    -webkit-animation: ro2 1s 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
@@ -1038,6 +1108,7 @@ img {
     width: 156px;
     height: 220px;
     animation: p5_man_l .8s infinite ease-in-out;
+    -webkit-animation: p5_man_l .8s infinite ease-in-out;
 }
 #p5_man_r {
     position: absolute;
@@ -1047,6 +1118,7 @@ img {
     height: 237px;
     overflow: hidden;
     animation: p5_man_l 1s infinite ease-in-out;
+    -webkit-animation: p5_man_l 1s infinite ease-in-out;
 }
 #p5_key {
     position: absolute;
@@ -1126,15 +1198,18 @@ img {
     height: 543px;
     overflow: hidden;
     animation: p5_l_man 4s infinite ease-in-out;
+    -webkit-animation: p5_l_man 4s infinite ease-in-out;
 }
 #p5 .ro1 {
     animation: ro1 1s ease-in-out;
+    -webkit-animation: ro1 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
 #p5 .ro2 {
     animation: ro2 1s 1s ease-in-out;
+    -webkit-animation: ro2 1s 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
@@ -1225,6 +1300,7 @@ img {
     height: 69px;
     overflow: hidden;
     animation: pic1 3s infinite ease-in-out;
+    -webkit-animation: pic1 3s infinite ease-in-out;
 }
 #p12_pic2 {
     position: absolute;
@@ -1234,6 +1310,7 @@ img {
     height: 64px;
     overflow: hidden;
     animation: pic3 3s infinite ease-in-out;
+    -webkit-animation: pic3 3s infinite ease-in-out;
 }
 #p12_pic3 {
     position: absolute;
@@ -1243,6 +1320,7 @@ img {
     height: 78px;
     overflow: hidden;
     animation: pic2 3s infinite ease-in-out;
+    -webkit-animation: pic2 3s infinite ease-in-out;
 }
 #p12_pic4 {
     position: absolute;
@@ -1252,6 +1330,7 @@ img {
     height: 98px;
     overflow: hidden;
     animation: pic1 3s infinite ease-in-out;
+    -webkit-animation: pic1 3s infinite ease-in-out;
 }
 #p12_pic5 {
     position: absolute;
@@ -1261,6 +1340,7 @@ img {
     height: 81px;
     overflow: hidden;
     animation: pic2 3s infinite ease-in-out;
+    -webkit-animation: pic2 3s infinite ease-in-out;
 }
 #p12_pic6 {
     position: absolute;
@@ -1270,6 +1350,7 @@ img {
     height: 77px;
     overflow: hidden;
     animation: pic3 3s infinite ease-in-out;
+    -webkit-animation: pic3 3s infinite ease-in-out;
 }
 #p12_pic7 {
     position: absolute;
@@ -1279,6 +1360,7 @@ img {
     height: 51px;
     overflow: hidden;
     animation: pic1 3s infinite ease-in-out;
+    -webkit-animation: pic1 3s infinite ease-in-out;
 }
 #p12_pic8 {
     position: absolute;
@@ -1288,6 +1370,7 @@ img {
     height: 68px;
     overflow: hidden;
     animation: pic2 3s infinite ease-in-out;
+    -webkit-animation: pic2 3s infinite ease-in-out;
 }
 #p12_pic9 {
     position: absolute;
@@ -1297,6 +1380,7 @@ img {
     height: 68px;
     overflow: hidden;
     animation: pic1 3s infinite ease-in-out;
+    -webkit-animation: pic1 3s infinite ease-in-out;
 }
 #p12_pic10 {
     position: absolute;
@@ -1306,6 +1390,7 @@ img {
     height: 72px;
     overflow: hidden;
     animation: pic3 3s infinite ease-in-out;
+    -webkit-animation: pic3 3s infinite ease-in-out;
 }
 #p12_pic11 {
     position: absolute;
@@ -1315,6 +1400,7 @@ img {
     height: 137px;
     overflow: hidden;
     animation: pic2 3s infinite ease-in-out;
+    -webkit-animation: pic2 3s infinite ease-in-out;
 }
 #p12_pic12 {
     position: absolute;
@@ -1324,6 +1410,7 @@ img {
     height: 75px;
     overflow: hidden;
     animation: pic1 3s infinite ease-in-out;
+    -webkit-animation: pic1 3s infinite ease-in-out;
 }
 #p12_pic13 {
     position: absolute;
@@ -1333,6 +1420,7 @@ img {
     height: 71px;
     overflow: hidden;
     animation: pic3 3s infinite ease-in-out;
+    -webkit-animation: pic3 3s infinite ease-in-out;
 }
 #p12_pic14 {
     position: absolute;
@@ -1342,6 +1430,7 @@ img {
     height: 55px;
     overflow: hidden;
     animation: pic2 3s infinite ease-in-out;
+    -webkit-animation: pic2 3s infinite ease-in-out;
 }
 #p12_pic15 {
     position: absolute;
@@ -1351,6 +1440,7 @@ img {
     height: 85px;
     overflow: hidden;
     animation: pic3 3s infinite ease-in-out;
+    -webkit-animation: pic3 3s infinite ease-in-out;
 }
 #p12_pic16 {
     position: absolute;
@@ -1360,6 +1450,7 @@ img {
     height: 62px;
     overflow: hidden;
     animation: pic1 3s infinite ease-in-out;
+    -webkit-animation: pic1 3s infinite ease-in-out;
 }
 #p12_pic17 {
     position: absolute;
@@ -1369,6 +1460,7 @@ img {
     height: 61px;
     overflow: hidden;
     animation: pic3 3s infinite ease-in-out;
+    -webkit-animation: pic3 3s infinite ease-in-out;
 }
 #p12_pic18 {
     position: absolute;
@@ -1378,6 +1470,7 @@ img {
     height: 116px;
     overflow: hidden;
     animation: pic1 3s infinite ease-in-out;
+    -webkit-animation: pic1 3s infinite ease-in-out;
 }
 #p12_pic19 {
     position: absolute;
@@ -1387,6 +1480,7 @@ img {
     height: 56px;
     overflow: hidden;
     animation: pic2 3s infinite ease-in-out;
+    -webkit-animation: pic2 3s infinite ease-in-out;
 }
 #p12_man {
     position: absolute;
@@ -1396,6 +1490,7 @@ img {
     height: 288px;
     overflow: hidden;
     animation: pic24 4s infinite ease-in-out;
+    -webkit-animation: pic24 4s infinite ease-in-out;
 }
 #p12_text1 {
     position: absolute;
@@ -1732,12 +1827,15 @@ img {
 }
 #p6_pic1 {
     animation: p6_pic1 5s infinite ease-in-out;
+    -webkit-animation: p6_pic1 5s infinite ease-in-out;
 }
 #p6_pic2 {
     animation: p6_pic2 5s infinite ease-in-out;
+    -webkit-animation: p6_pic2 5s infinite ease-in-out;
 }
 #p6_pic3{
     animation: p6_pic3 5s infinite ease-in-out;
+    -webkit-animation: p6_pic3 5s infinite ease-in-out;
 }
 #p6_man {
     position: absolute;
@@ -1791,12 +1889,14 @@ img {
 }
 #p6 .ro1 {
     animation: ro1 1s ease-in-out;
+    -webkit-animation: ro1 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
 #p6 .ro2 {
     animation: ro2 1s 1s ease-in-out;
+    -webkit-animation: ro2 1s 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
@@ -1988,6 +2088,7 @@ img {
     height: 157px;
     overflow: hidden;
     animation: p7_cat1 3s infinite ease-in-out;
+    -webkit-animation: p7_cat1 3s infinite ease-in-out;
 }
 #p7_cat2 {
     position: absolute;
@@ -1997,6 +2098,7 @@ img {
     height: 174px;
     overflow: hidden;
     animation: p7_cat2 3s infinite ease-in-out;
+    -webkit-animation: p7_cat2 3s infinite ease-in-out;
 }
 #p7_cat3 {
     position: absolute;
@@ -2006,6 +2108,7 @@ img {
     height: 177px;
     overflow: hidden;
     animation: p7_cat2 3s infinite ease-in-out;
+    -webkit-animation: p7_cat2 3s infinite ease-in-out;
 }
 #p7_cat4 {
     position: absolute;
@@ -2015,6 +2118,7 @@ img {
     height: 97px;
     overflow: hidden;
     animation: p7_cat1 3s infinite ease-in-out;
+    -webkit-animation: p7_cat1 3s infinite ease-in-out;
 }
 #p7_man {
     position: absolute;
@@ -2024,6 +2128,7 @@ img {
     height: 327px;
     overflow: hidden;
     animation: pic2 4s infinite ease-in-out;
+    -webkit-animation: pic2 4s infinite ease-in-out;
 }
 #p7_text1 {
     position: absolute;
@@ -2127,12 +2232,14 @@ img {
 }
 #p7 .ro1 {
     animation: ro1 1s ease-in-out;
+    -webkit-animation: ro1 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
 #p7 .ro2 {
     animation: ro2 1s 1s ease-in-out;
+    -webkit-animation: ro2 1s 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
@@ -2153,6 +2260,7 @@ img {
     height: 145px;
     overflow: hidden;
     animation: p7_l_t1 3s infinite ease-in-out;
+    -webkit-animation: p7_l_t1 3s infinite ease-in-out;
 }
 #p7_l_t2 {
     position: absolute;
@@ -2162,6 +2270,7 @@ img {
     height: 259px;
     overflow: hidden;
     animation: p7_l_t2 3s 1.5s infinite ease-in-out;
+    -webkit-animation: p7_l_t2 3s 1.5s infinite ease-in-out;
 }
 #p7_l_man {
     position: absolute;
@@ -2171,6 +2280,7 @@ img {
     height: 470px;
     overflow: hidden;
     animation: p7_l_man 3s infinite ease-in-out;
+    -webkit-animation: p7_l_man 3s infinite ease-in-out;
 }
 #p7_l_ico1 {
     position: absolute;
@@ -2180,6 +2290,7 @@ img {
     height: 98px;
     overflow: hidden;
     animation: p7_l_ico1 2s infinite ease-in-out;
+    -webkit-animation: p7_l_ico1 2s infinite ease-in-out;
 }
 #p7_l_ico2 {
     position: absolute;
@@ -2189,6 +2300,7 @@ img {
     height: 97px;
     overflow: hidden;
     animation: p7_l_ico2 1s infinite ease-in-out;
+    -webkit-animation: p7_l_ico2 1s infinite ease-in-out;
 }
 
 /*-----------------p9--------------------*/
@@ -2306,6 +2418,7 @@ img {
     height: 188px;
     overflow: hidden;
     animation: p8_pic3 2s infinite ease-in-out;
+    -webkit-animation: p8_pic3 2s infinite ease-in-out;
 }
 #p8_man {
     position: absolute;
@@ -2417,12 +2530,14 @@ img {
 }
 #p8 .ro1 {
     animation: ro1 1s ease-in-out;
+    -webkit-animation: ro1 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
 #p8 .ro2 {
     animation: ro2 1s 1s ease-in-out;
+    -webkit-animation: ro2 1s 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
@@ -2443,6 +2558,7 @@ img {
     height: 268px;
     overflow: hidden;
     animation: p8_l_p2 1s infinite ease-in-out;
+    -webkit-animation: p8_l_p2 1s infinite ease-in-out;
 }
 #p8_l_p3 {
     position: absolute;
@@ -2640,6 +2756,7 @@ img {
     overflow: hidden;
     opacity: 0;
     animation: p9_pic1 1s 1s infinite ease-in-out;
+    -webkit-animation: p9_pic1 1s 1s infinite ease-in-out;
 }
 #p9_pic2 {
     position: absolute;
@@ -2649,9 +2766,11 @@ img {
     height: 125px;
     overflow: hidden;
     animation: p9_pic2 1.5s 1s infinite ease-in-out;
+    -webkit-animation: p9_pic2 1.5s 1s infinite ease-in-out;
 }
 #p9_pic2 img {
     animation: p9_pic2Img 1s ease-in-out;
+    -webkit-animation: p9_pic2Img 1s ease-in-out;
 }
 #p9_pic3 {
     position: absolute;
@@ -2661,6 +2780,7 @@ img {
     height: 392px;
     overflow: hidden;
     animation: pic1 3s infinite ease-in-out;
+    -webkit-animation: pic1 3s infinite ease-in-out;
 }
 #p9_man {
     position: absolute;
@@ -2670,6 +2790,7 @@ img {
     height: 379px;
     overflow: hidden;
     animation: pic2 4s infinite ease-in-out;
+    -webkit-animation: pic2 4s infinite ease-in-out;
 }
 #p9_text1 {
     position: absolute;
@@ -2695,6 +2816,7 @@ img {
     height: 75px;
     overflow: hidden;
     animation: p9_cloud1 4s infinite ease-in-out;
+    -webkit-animation: p9_cloud1 4s infinite ease-in-out;
 }
 #p9_cloud2 {
     position: absolute;
@@ -2704,6 +2826,7 @@ img {
     height: 80px;
     overflow: hidden;
     animation: p9_cloud2 2s infinite ease-in-out;
+    -webkit-animation: p9_cloud2 2s infinite ease-in-out;
 }
 #p9_cloud3 {
     position: absolute;
@@ -2713,6 +2836,7 @@ img {
     height: 119px;
     overflow: hidden;
     animation: p9_cloud3 4s infinite ease-in-out;
+    -webkit-animation: p9_cloud3 4s infinite ease-in-out;
 }
 #p9_cloud4 {
     position: absolute;
@@ -2722,6 +2846,7 @@ img {
     height: 120px;
     overflow: hidden;
     animation: p9_cloud4 3s infinite ease-in-out;
+    -webkit-animation: p9_cloud4 3s infinite ease-in-out;
 }
 #p9_cloud5 {
     position: absolute;
@@ -2731,6 +2856,7 @@ img {
     height: 54px;
     overflow: hidden;
     animation: p9_cloud5 4s infinite ease-in-out;
+    -webkit-animation: p9_cloud5 4s infinite ease-in-out;
 }
 #p9_prev {
     position: absolute;
@@ -2758,12 +2884,14 @@ img {
 }
 #p9 .ro1 {
     animation: ro1 1s ease-in-out;
+    -webkit-animation: ro1 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
 #p9 .ro2 {
     animation: ro2 1s 1s ease-in-out;
+    -webkit-animation: ro2 1s 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
@@ -2784,6 +2912,7 @@ img {
     height: 569px;
     overflow: hidden;
     animation: p9_l_p1 2.5s infinite ease-in-out;
+    -webkit-animation: p9_l_p1 2.5s infinite ease-in-out;
 }
 #p9_l_p2 {
     position: absolute;
@@ -2793,6 +2922,7 @@ img {
     height: 565px;
     overflow: hidden;
     animation: p9_l_p2 2.5s .5s infinite ease-in-out;
+    -webkit-animation: p9_l_p2 2.5s .5s infinite ease-in-out;
 }
 #p9_l_man {
     position: absolute;
@@ -2932,13 +3062,16 @@ img {
 }
 #p10_pic1 {
     animation: p10_pic1 3s infinite ease-in-out;
+    -webkit-animation: p10_pic1 3s infinite ease-in-out;
 }
 #p10_pic2 {
     animation: p10_pic1 3s infinite ease-in-out;
+    -webkit-animation: p10_pic1 3s infinite ease-in-out;
 }
 #p10_pic1 img,
 #p10_pic2 img {
     animation: p10_pic1Img 4s ease-in-out;
+    -webkit-animation: p10_pic1Img 4s ease-in-out;
 }
 #p10_pic3 {
     position: absolute;
@@ -2948,6 +3081,7 @@ img {
     height: 410px;
     overflow: hidden;
     animation: p10_pic3 5s infinite ease-in-out;
+    -webkit-animation: p10_pic3 5s infinite ease-in-out;
 }
 #p10_man {
     position: absolute;
@@ -2957,9 +3091,11 @@ img {
     height: 488px;
     overflow: hidden;
     animation: p10_man 3s .8s infinite ease-in-out;
+    -webkit-animation: p10_man 3s .8s infinite ease-in-out;
 }
 #p10_man img {
     animation: p10_pic1Img 4s ease-in-out;
+    -webkit-animation: p10_pic1Img 4s ease-in-out;
 }
 #p10_text1,
 #p10_text2 {
@@ -2996,12 +3132,14 @@ img {
 }
 #p10 .ro1 {
     animation: ro1 1s ease-in-out;
+    -webkit-animation: ro1 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
 #p10 .ro2 {
     animation: ro2 1s 1s ease-in-out;
+    -webkit-animation: ro2 1s 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
@@ -3030,6 +3168,7 @@ img {
     height: 103px;
     overflow: hidden;
     animation: p10_l_p2 2.5s infinite ease-in-out;
+    -webkit-animation: p10_l_p2 2.5s infinite ease-in-out;
 }
 #p10_l_p3 {
     position: absolute;
@@ -3039,6 +3178,7 @@ img {
     height: 106px;
     overflow: hidden;
     animation: p10_l_p2 2.5s .5s infinite ease-in-out;
+    -webkit-animation: p10_l_p2 2.5s .5s infinite ease-in-out;
 }
 #p10_l_p4 {
     position: absolute;
@@ -3048,6 +3188,7 @@ img {
     height: 81px;
     overflow: hidden;
     animation: p10_l_p4 1.5s infinite ease-in-out;
+    -webkit-animation: p10_l_p4 1.5s infinite ease-in-out;
 }
 #p10_l_p5 {
     position: absolute;
@@ -3057,6 +3198,7 @@ img {
     height: 60px;
     overflow: hidden;
     animation: p10_l_p5 1.5s infinite ease-in-out;
+    -webkit-animation: p10_l_p5 1.5s infinite ease-in-out;
 }
 #p10_l_p6 {
     position: absolute;
@@ -3066,6 +3208,7 @@ img {
     height: 230px;
     overflow: hidden;
     animation: p10_l_p6 2s infinite ease-in-out;
+    -webkit-animation: p10_l_p6 2s infinite ease-in-out;
 }
 #p10_l_ufo {
     position: absolute;
@@ -3075,6 +3218,7 @@ img {
     height: 223px;
     overflow: hidden;
     animation: p10_l_ufo 5s infinite ease-in-out;
+    -webkit-animation: p10_l_ufo 5s infinite ease-in-out;
 }
 
 /*-------------------p12----------------*/
@@ -3208,9 +3352,11 @@ img {
 #p11_pic1 {
     opacity: 0;
     animation: p11_pic1 5s infinite ease-in-out;
+    -webkit-animation: p11_pic1 5s infinite ease-in-out;
 }
 #p11_pic0 {
     animation: p11_pic0 5s infinite ease-in-out;
+    -webkit-animation: p11_pic0 5s infinite ease-in-out;
 }
 #p11_pic2 {
     position: absolute;
@@ -3221,6 +3367,7 @@ img {
     overflow: hidden;
     transform-origin: right;
     animation: p11_pic2 3s infinite ease-in-out;
+    -webkit-animation: p11_pic2 3s infinite ease-in-out;
 }
 #p11_pic3 {
     position: absolute;
@@ -3231,6 +3378,7 @@ img {
     overflow: hidden;
     transform-origin: left;
     animation: p11_pic3 4s  infinite ease-in-out;
+    -webkit-animation: p11_pic3 4s  infinite ease-in-out;
 }
 #p11_pic4 {
     position: absolute;
@@ -3240,6 +3388,7 @@ img {
     height: 216px;
     overflow: hidden;
     animation: p11_pic3 4s  infinite ease-in-out;
+    -webkit-animation: p11_pic3 4s  infinite ease-in-out;
 }
 #p11_pic5 {
     position: absolute;
@@ -3249,6 +3398,7 @@ img {
     height: 241px;
     overflow: hidden;
     animation: p11_pic2 3s infinite ease-in-out;
+    -webkit-animation: p11_pic2 3s infinite ease-in-out;
 }
 #p11_man {
     position: absolute;
@@ -3258,6 +3408,7 @@ img {
     height: 495px;
     overflow: hidden;
     animation: pic2 4s infinite ease-in-out;
+    -webkit-animation: pic2 4s infinite ease-in-out;
 }
 #p11_man img {
     width: 254px;
@@ -3321,12 +3472,14 @@ img {
 }
 #p11 .ro1 {
     animation: ro1 1s ease-in-out;
+    -webkit-animation: ro1 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
 #p11 .ro2 {
     animation: ro2 1s 1s ease-in-out;
+    -webkit-animation: ro2 1s 1s ease-in-out;
     z-index: 2;
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
@@ -3348,6 +3501,7 @@ img {
     overflow: hidden;
     opacity: 0;
     animation: p11_l_black 10s  infinite ease-in-out;
+    -webkit-animation: p11_l_black 10s  infinite ease-in-out;
 }
 #p11_l_star1 {
     position: absolute;
@@ -3365,6 +3519,7 @@ img {
     height: 32px;
     overflow: hidden;
     animation: p11_l_star3 1s infinite ease-in-out;
+    -webkit-animation: p11_l_star3 1s infinite ease-in-out;
 }
 #p11_l_star4 {
     position: absolute;
@@ -3373,6 +3528,7 @@ img {
     width: 16px;
     height: 32px;
     animation: p11_l_star4 1s infinite ease-in-out;
+    -webkit-animation: p11_l_star4 1s infinite ease-in-out;
 }
 #p11_l_star2 {
     position: absolute;
@@ -3382,6 +3538,7 @@ img {
     height: 89px;
     overflow: hidden;
     animation: p11_l_star2 5s infinite ease-in-out;
+    -webkit-animation: p11_l_star2 5s infinite ease-in-out;
 }
 #p11_l_man {
     position: absolute;
@@ -3400,6 +3557,7 @@ img {
     overflow: hidden;
     opacity: 0;
     animation: p11_l_black 10s  infinite ease-in-out;
+    -webkit-animation: p11_l_black 10s  infinite ease-in-out;
 }
 #p11_l_text {
     position: absolute;
@@ -3410,6 +3568,7 @@ img {
     overflow: hidden;
     opacity: 0;
     animation: p11_l_black 10s  infinite ease-in-out;
+    -webkit-animation: p11_l_black 10s  infinite ease-in-out;
 }
 #p11_l_text1 {
     position: absolute;
